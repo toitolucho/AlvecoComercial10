@@ -1,0 +1,872 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+  <EntityContainerMapping StorageEntityContainer="AlvecoComercial10ModelStoreContainer" CdmEntityContainer="AlvecoComercial10Entities">
+    <EntitySetMapping Name="Almacenes">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.Almacene">
+        <MappingFragment StoreEntitySet="Almacenes">
+          <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+          <ScalarProperty Name="NombreAlmacen" ColumnName="NombreAlmacen" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bitacoras">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.Bitacora">
+        <MappingFragment StoreEntitySet="Bitacora">
+          <ScalarProperty Name="BitacoraID" ColumnName="BitacoraID" />
+          <ScalarProperty Name="EventType" ColumnName="EventType" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="EventInfo" ColumnName="EventInfo" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="ValoresInsertados" ColumnName="ValoresInsertados" />
+          <ScalarProperty Name="ValoresEliminados" ColumnName="ValoresEliminados" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clientes">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.Cliente">
+        <MappingFragment StoreEntitySet="Clientes">
+          <ScalarProperty Name="CodigoCliente" ColumnName="CodigoCliente" />
+          <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
+          <ScalarProperty Name="NombreRepresentante" ColumnName="NombreRepresentante" />
+          <ScalarProperty Name="CodigoTipoCliente" ColumnName="CodigoTipoCliente" />
+          <ScalarProperty Name="NITCliente" ColumnName="NITCliente" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="CodigoEstadoCliente" ColumnName="CodigoEstadoCliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComprasProductos">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.ComprasProducto">
+        <MappingFragment StoreEntitySet="ComprasProductos">
+          <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+          <ScalarProperty Name="NumeroCompraProducto" ColumnName="NumeroCompraProducto" />
+          <ScalarProperty Name="CodigoCompraProducto" ColumnName="CodigoCompraProducto" />
+          <ScalarProperty Name="FechaHoraRegistro" ColumnName="FechaHoraRegistro" />
+          <ScalarProperty Name="FechaHoraRecepcion" ColumnName="FechaHoraRecepcion" />
+          <ScalarProperty Name="CodigoTipoCompra" ColumnName="CodigoTipoCompra" />
+          <ScalarProperty Name="CodigoEstadoCompra" ColumnName="CodigoEstadoCompra" />
+          <ScalarProperty Name="NumeroFactura" ColumnName="NumeroFactura" />
+          <ScalarProperty Name="NumeroComprobante" ColumnName="NumeroComprobante" />
+          <ScalarProperty Name="MontoTotalCompra" ColumnName="MontoTotalCompra" />
+          <ScalarProperty Name="MontoTotalPagoEfectivo" ColumnName="MontoTotalPagoEfectivo" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComprasProductosDetalles">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.ComprasProductosDetalle">
+        <MappingFragment StoreEntitySet="ComprasProductosDetalle">
+          <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+          <ScalarProperty Name="NumeroCompraProducto" ColumnName="NumeroCompraProducto" />
+          <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+          <ScalarProperty Name="CantidadCompra" ColumnName="CantidadCompra" />
+          <ScalarProperty Name="CantidadEntregada" ColumnName="CantidadEntregada" />
+          <ScalarProperty Name="PrecioUnitarioCompra" ColumnName="PrecioUnitarioCompra" />
+          <ScalarProperty Name="TiempoGarantiaCompra" ColumnName="TiempoGarantiaCompra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComprasProductosDetalleEntregas">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.ComprasProductosDetalleEntrega">
+        <MappingFragment StoreEntitySet="ComprasProductosDetalleEntrega">
+          <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+          <ScalarProperty Name="NumeroCompraProducto" ColumnName="NumeroCompraProducto" />
+          <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+          <ScalarProperty Name="CantidadEntregada" ColumnName="CantidadEntregada" />
+          <ScalarProperty Name="FechaHoraEntrega" ColumnName="FechaHoraEntrega" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComprasProductosDevoluciones">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.ComprasProductosDevolucione">
+        <MappingFragment StoreEntitySet="ComprasProductosDevoluciones">
+          <ScalarProperty Name="NumeroAlmacenDevolucion" ColumnName="NumeroAlmacenDevolucion" />
+          <ScalarProperty Name="NumeroCompraProductoDevolucion" ColumnName="NumeroCompraProductoDevolucion" />
+          <ScalarProperty Name="CodigoDevolucionCompraProducto" ColumnName="CodigoDevolucionCompraProducto" />
+          <ScalarProperty Name="FechaHoraRegistro" ColumnName="FechaHoraRegistro" />
+          <ScalarProperty Name="CodigoEstadoCompraDevolucion" ColumnName="CodigoEstadoCompraDevolucion" />
+          <ScalarProperty Name="MontoTotalCompraDevolucion" ColumnName="MontoTotalCompraDevolucion" />
+          <ScalarProperty Name="MontoTotalPagoEfectivo" ColumnName="MontoTotalPagoEfectivo" />
+          <ScalarProperty Name="FechaHoraDevolucion" ColumnName="FechaHoraDevolucion" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComprasProductosDevolucionesDetalles">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.ComprasProductosDevolucionesDetalle">
+        <MappingFragment StoreEntitySet="ComprasProductosDevolucionesDetalle">
+          <ScalarProperty Name="NumeroAlmacenDevolucion" ColumnName="NumeroAlmacenDevolucion" />
+          <ScalarProperty Name="NumeroCompraProductoDevolucion" ColumnName="NumeroCompraProductoDevolucion" />
+          <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+          <ScalarProperty Name="CantidadCompraDevolucion" ColumnName="CantidadCompraDevolucion" />
+          <ScalarProperty Name="PrecioUnitarioDevolucion" ColumnName="PrecioUnitarioDevolucion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Conceptos">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.Concepto">
+        <MappingFragment StoreEntitySet="Conceptos">
+          <ScalarProperty Name="NumeroConcepto" ColumnName="NumeroConcepto" />
+          <ScalarProperty Name="Concepto1" ColumnName="Concepto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CuentasPorCobrars">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.CuentasPorCobrar">
+        <MappingFragment StoreEntitySet="CuentasPorCobrar">
+          <ScalarProperty Name="NumeroCuentaPorCobrar" ColumnName="NumeroCuentaPorCobrar" />
+          <ScalarProperty Name="FechaHoraRegistro" ColumnName="FechaHoraRegistro" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+          <ScalarProperty Name="FechaLimite" ColumnName="FechaLimite" />
+          <ScalarProperty Name="CodigoEstado" ColumnName="CodigoEstado" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="DIUsuario" ColumnName="DIUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CuentasPorCobrarCobros">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.CuentasPorCobrarCobro">
+        <MappingFragment StoreEntitySet="CuentasPorCobrarCobros">
+          <ScalarProperty Name="NumeroCuentaPorCobrar" ColumnName="NumeroCuentaPorCobrar" />
+          <ScalarProperty Name="NumeroCobro" ColumnName="NumeroCobro" />
+          <ScalarProperty Name="FechaHoraCobro" ColumnName="FechaHoraCobro" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+          <ScalarProperty Name="DIUsuario" ColumnName="DIUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CuentasPorPagars">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.CuentasPorPagar">
+        <MappingFragment StoreEntitySet="CuentasPorPagar">
+          <ScalarProperty Name="NumeroCuentaPorPagar" ColumnName="NumeroCuentaPorPagar" />
+          <ScalarProperty Name="FechaHoraRegistro" ColumnName="FechaHoraRegistro" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+          <ScalarProperty Name="FechaLimite" ColumnName="FechaLimite" />
+          <ScalarProperty Name="CodigoEstado" ColumnName="CodigoEstado" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="DIUsuario" ColumnName="DIUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CuentasPorPagarPagos">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.CuentasPorPagarPago">
+        <MappingFragment StoreEntitySet="CuentasPorPagarPagos">
+          <ScalarProperty Name="NumeroCuentaPorPagar" ColumnName="NumeroCuentaPorPagar" />
+          <ScalarProperty Name="NumeroPago" ColumnName="NumeroPago" />
+          <ScalarProperty Name="FechaHoraPago" ColumnName="FechaHoraPago" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+          <ScalarProperty Name="DIUsuario" ColumnName="DIUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departamentos">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.Departamento">
+        <MappingFragment StoreEntitySet="Departamentos">
+          <ScalarProperty Name="CodigoPais" ColumnName="CodigoPais" />
+          <ScalarProperty Name="CodigoDepartamento" ColumnName="CodigoDepartamento" />
+          <ScalarProperty Name="NombreDepartamento" ColumnName="NombreDepartamento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InventariosProductos">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.InventariosProducto">
+        <MappingFragment StoreEntitySet="InventariosProductos">
+          <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+          <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+          <ScalarProperty Name="CantidadExistencia" ColumnName="CantidadExistencia" />
+          <ScalarProperty Name="CantidadRequerida" ColumnName="CantidadRequerida" />
+          <ScalarProperty Name="PrecioUnitarioCompra" ColumnName="PrecioUnitarioCompra" />
+          <ScalarProperty Name="PrecioUnitarioVentaPorMayor" ColumnName="PrecioUnitarioVentaPorMayor" />
+          <ScalarProperty Name="PrecioUnitarioVentaPorMenor" ColumnName="PrecioUnitarioVentaPorMenor" />
+          <ScalarProperty Name="PorcentajeGananciaVentaPorMayor" ColumnName="PorcentajeGananciaVentaPorMayor" />
+          <ScalarProperty Name="PorcentajeGananciaVentaPorMenor" ColumnName="PorcentajeGananciaVentaPorMenor" />
+          <ScalarProperty Name="TiempoGarantiaProducto" ColumnName="TiempoGarantiaProducto" />
+          <ScalarProperty Name="StockMinimo" ColumnName="StockMinimo" />
+          <ScalarProperty Name="FechaHoraIngresoInventario" ColumnName="FechaHoraIngresoInventario" />
+          <ScalarProperty Name="PrecioValoradoTotal" ColumnName="PrecioValoradoTotal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InventariosProductosCantidadesTransaccionesHistorials">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.InventariosProductosCantidadesTransaccionesHistorial">
+        <MappingFragment StoreEntitySet="InventariosProductosCantidadesTransaccionesHistorial">
+          <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+          <ScalarProperty Name="NumeroTransaccionProducto" ColumnName="NumeroTransaccionProducto" />
+          <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+          <ScalarProperty Name="CodigoTipoTransaccion" ColumnName="CodigoTipoTransaccion" />
+          <ScalarProperty Name="FechaHoraCompra" ColumnName="FechaHoraCompra" />
+          <ScalarProperty Name="CantidadExistente" ColumnName="CantidadExistente" />
+          <ScalarProperty Name="PrecioUnitario" ColumnName="PrecioUnitario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lugares">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.Lugare">
+        <MappingFragment StoreEntitySet="Lugares">
+          <ScalarProperty Name="CodigoPais" ColumnName="CodigoPais" />
+          <ScalarProperty Name="CodigoDepartamento" ColumnName="CodigoDepartamento" />
+          <ScalarProperty Name="CodigoProvincia" ColumnName="CodigoProvincia" />
+          <ScalarProperty Name="CodigoLugar" ColumnName="CodigoLugar" />
+          <ScalarProperty Name="NombreLugar" ColumnName="NombreLugar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Movilidades">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.Movilidade">
+        <MappingFragment StoreEntitySet="Movilidades">
+          <ScalarProperty Name="CodigoMovilidad" ColumnName="CodigoMovilidad" />
+          <ScalarProperty Name="NombreMovilidad" ColumnName="NombreMovilidad" />
+          <ScalarProperty Name="CodigoPlaca" ColumnName="CodigoPlaca" />
+          <ScalarProperty Name="CodigoEstadoMovilidad" ColumnName="CodigoEstadoMovilidad" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MovilidadesModelos">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.MovilidadesModelo">
+        <MappingFragment StoreEntitySet="MovilidadesModelos">
+          <ScalarProperty Name="CodigoModelo" ColumnName="CodigoModelo" />
+          <ScalarProperty Name="NombreModelo" ColumnName="NombreModelo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Paises">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.Pais">
+        <MappingFragment StoreEntitySet="Paises">
+          <ScalarProperty Name="CodigoPais" ColumnName="CodigoPais" />
+          <ScalarProperty Name="NombrePais" ColumnName="NombrePais" />
+          <ScalarProperty Name="Nacionalidad" ColumnName="Nacionalidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personas">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.Persona">
+        <MappingFragment StoreEntitySet="Personas">
+          <ScalarProperty Name="DIPersona" ColumnName="DIPersona" />
+          <ScalarProperty Name="Paterno" ColumnName="Paterno" />
+          <ScalarProperty Name="Materno" ColumnName="Materno" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="EstadoCivil" ColumnName="EstadoCivil" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DireccionD" ColumnName="DireccionD" />
+          <ScalarProperty Name="TelefonoD" ColumnName="TelefonoD" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Productos">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.Producto">
+        <MappingFragment StoreEntitySet="Productos">
+          <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+          <ScalarProperty Name="CodigoProductoFabricante" ColumnName="CodigoProductoFabricante" />
+          <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+          <ScalarProperty Name="NombreProductoAlternativo" ColumnName="NombreProductoAlternativo" />
+          <ScalarProperty Name="CodigoTipoCalculoInventario" ColumnName="CodigoTipoCalculoInventario" />
+          <ScalarProperty Name="ActualizarPrecioVenta" ColumnName="ActualizarPrecioVenta" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="CodigoProveedor" ColumnName="CodigoProveedor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductosMarcas">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.ProductosMarca">
+        <MappingFragment StoreEntitySet="ProductosMarcas">
+          <ScalarProperty Name="CodigoMarca" ColumnName="CodigoMarca" />
+          <ScalarProperty Name="NombreMarca" ColumnName="NombreMarca" />
+          <ScalarProperty Name="CodigoTipoMarca" ColumnName="CodigoTipoMarca" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductosTipos">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.ProductosTipos">
+        <MappingFragment StoreEntitySet="ProductosTipos">
+          <ScalarProperty Name="CodigoProductoTipo" ColumnName="CodigoProductoTipo" />
+          <ScalarProperty Name="CodigoProductoTipoPadre" ColumnName="CodigoProductoTipoPadre" />
+          <ScalarProperty Name="NombreProductoTipo" ColumnName="NombreProductoTipo" />
+          <ScalarProperty Name="DescripcionProductoTipo" ColumnName="DescripcionProductoTipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductosUnidades">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.ProductosUnidade">
+        <MappingFragment StoreEntitySet="ProductosUnidades">
+          <ScalarProperty Name="CodigoUnidad" ColumnName="CodigoUnidad" />
+          <ScalarProperty Name="NombreUnidad" ColumnName="NombreUnidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proveedores">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.Proveedore">
+        <MappingFragment StoreEntitySet="Proveedores">
+          <ScalarProperty Name="CodigoProveedor" ColumnName="CodigoProveedor" />
+          <ScalarProperty Name="NombreRazonSocial" ColumnName="NombreRazonSocial" />
+          <ScalarProperty Name="NombreRepresentante" ColumnName="NombreRepresentante" />
+          <ScalarProperty Name="CodigoTipoProveedor" ColumnName="CodigoTipoProveedor" />
+          <ScalarProperty Name="NITProveedor" ColumnName="NITProveedor" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Casilla" ColumnName="Casilla" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PorcentajeGananciaVentaPorMayor" ColumnName="PorcentajeGananciaVentaPorMayor" />
+          <ScalarProperty Name="PorcentajeGananciaVentaPorMenor" ColumnName="PorcentajeGananciaVentaPorMenor" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="ProveedorActivo" ColumnName="ProveedorActivo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Provincias">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.Provincia">
+        <MappingFragment StoreEntitySet="Provincias">
+          <ScalarProperty Name="CodigoPais" ColumnName="CodigoPais" />
+          <ScalarProperty Name="CodigoDepartamento" ColumnName="CodigoDepartamento" />
+          <ScalarProperty Name="CodigoProvincia" ColumnName="CodigoProvincia" />
+          <ScalarProperty Name="NombreProvincia" ColumnName="NombreProvincia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.Usuario">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="DIUsuario" ColumnName="DIUsuario" />
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VentasProductos">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.VentasProducto">
+        <MappingFragment StoreEntitySet="VentasProductos">
+          <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+          <ScalarProperty Name="NumeroVentaProducto" ColumnName="NumeroVentaProducto" />
+          <ScalarProperty Name="CodigoVentaProducto" ColumnName="CodigoVentaProducto" />
+          <ScalarProperty Name="FechaHoraVenta" ColumnName="FechaHoraVenta" />
+          <ScalarProperty Name="FechaHoraEntrega" ColumnName="FechaHoraEntrega" />
+          <ScalarProperty Name="NumeroComprobante" ColumnName="NumeroComprobante" />
+          <ScalarProperty Name="CodigoEstadoVenta" ColumnName="CodigoEstadoVenta" />
+          <ScalarProperty Name="CodigoTipoVenta" ColumnName="CodigoTipoVenta" />
+          <ScalarProperty Name="NumeroFactura" ColumnName="NumeroFactura" />
+          <ScalarProperty Name="MontoTotalVenta" ColumnName="MontoTotalVenta" />
+          <ScalarProperty Name="MontoTotalPagoEfectivo" ColumnName="MontoTotalPagoEfectivo" />
+          <ScalarProperty Name="VentaParaDistribuir" ColumnName="VentaParaDistribuir" />
+          <ScalarProperty Name="MontoTotalDescuento" ColumnName="MontoTotalDescuento" />
+          <ScalarProperty Name="EsVentaDistribuible" ColumnName="EsVentaDistribuible" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VentasProductosDetalles">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.VentasProductosDetalle">
+        <MappingFragment StoreEntitySet="VentasProductosDetalle">
+          <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+          <ScalarProperty Name="NumeroVentaProducto" ColumnName="NumeroVentaProducto" />
+          <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+          <ScalarProperty Name="CantidadVenta" ColumnName="CantidadVenta" />
+          <ScalarProperty Name="CantidadEntregada" ColumnName="CantidadEntregada" />
+          <ScalarProperty Name="PrecioUnitarioVenta" ColumnName="PrecioUnitarioVenta" />
+          <ScalarProperty Name="PorcentajeDescuento" ColumnName="PorcentajeDescuento" />
+          <ScalarProperty Name="TiempoGarantiaVenta" ColumnName="TiempoGarantiaVenta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VentasProductosDetalleEntregas">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.VentasProductosDetalleEntrega">
+        <MappingFragment StoreEntitySet="VentasProductosDetalleEntrega">
+          <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+          <ScalarProperty Name="NumeroVentaProducto" ColumnName="NumeroVentaProducto" />
+          <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+          <ScalarProperty Name="FechaHoraEntrega" ColumnName="FechaHoraEntrega" />
+          <ScalarProperty Name="FechaHoraCompraInventario" ColumnName="FechaHoraCompraInventario" />
+          <ScalarProperty Name="CantidadEntregada" ColumnName="CantidadEntregada" />
+          <ScalarProperty Name="PrecioUnitarioCompraInventario" ColumnName="PrecioUnitarioCompraInventario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VentasProductosDevoluciones">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.VentasProductosDevolucione">
+        <MappingFragment StoreEntitySet="VentasProductosDevoluciones">
+          <ScalarProperty Name="NumeroAlmacenDevolucion" ColumnName="NumeroAlmacenDevolucion" />
+          <ScalarProperty Name="NumeroVentaProductoDevolucion" ColumnName="NumeroVentaProductoDevolucion" />
+          <ScalarProperty Name="CodigoDevolucionVentaProducto" ColumnName="CodigoDevolucionVentaProducto" />
+          <ScalarProperty Name="FechaHoraRegistro" ColumnName="FechaHoraRegistro" />
+          <ScalarProperty Name="CodigoEstadoVentaDevolucion" ColumnName="CodigoEstadoVentaDevolucion" />
+          <ScalarProperty Name="MontoTotalVentaDevolucion" ColumnName="MontoTotalVentaDevolucion" />
+          <ScalarProperty Name="MontoTotalPagoEfectivo" ColumnName="MontoTotalPagoEfectivo" />
+          <ScalarProperty Name="FechaHoraDevolucion" ColumnName="FechaHoraDevolucion" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VentasProductosDevolucionesDetalles">
+      <EntityTypeMapping TypeName="AlvecoComercial10Model.VentasProductosDevolucionesDetalle">
+        <MappingFragment StoreEntitySet="VentasProductosDevolucionesDetalle">
+          <ScalarProperty Name="NumeroAlmacenDevolucion" ColumnName="NumeroAlmacenDevolucion" />
+          <ScalarProperty Name="NumeroVentaProductoDevolucion" ColumnName="NumeroVentaProductoDevolucion" />
+          <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+          <ScalarProperty Name="CantidadVentaDevolucion" ColumnName="CantidadVentaDevolucion" />
+          <ScalarProperty Name="PrecioUnitarioDevolucion" ColumnName="PrecioUnitarioDevolucion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="FK__CuentasPo__Numer__665875C9" TypeName="AlvecoComercial10Model.FK__CuentasPo__Numer__665875C9" StoreEntitySet="CuentasPorPagar">
+      <EndProperty Name="Almacenes">
+        <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+      </EndProperty>
+      <EndProperty Name="CuentasPorPagar">
+        <ScalarProperty Name="NumeroCuentaPorPagar" ColumnName="NumeroCuentaPorPagar" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__CuentasPo__Numer__72BE4CAE" TypeName="AlvecoComercial10Model.FK__CuentasPo__Numer__72BE4CAE" StoreEntitySet="CuentasPorCobrar">
+      <EndProperty Name="Almacenes">
+        <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+      </EndProperty>
+      <EndProperty Name="CuentasPorCobrar">
+        <ScalarProperty Name="NumeroCuentaPorCobrar" ColumnName="NumeroCuentaPorCobrar" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_ComprasProductosAlmacenes" TypeName="AlvecoComercial10Model.FK_ComprasProductosAlmacenes" StoreEntitySet="ComprasProductos">
+      <EndProperty Name="Almacenes">
+        <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+      </EndProperty>
+      <EndProperty Name="ComprasProductos">
+        <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+        <ScalarProperty Name="NumeroCompraProducto" ColumnName="NumeroCompraProducto" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_VentasProductosAlmacenes" TypeName="AlvecoComercial10Model.FK_VentasProductosAlmacenes" StoreEntitySet="VentasProductos">
+      <EndProperty Name="Almacenes">
+        <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+      </EndProperty>
+      <EndProperty Name="VentasProductos">
+        <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+        <ScalarProperty Name="NumeroVentaProducto" ColumnName="NumeroVentaProducto" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__Clientes__361E876B" TypeName="AlvecoComercial10Model.FK__Clientes__361E876B" StoreEntitySet="Clientes">
+      <EndProperty Name="Lugares">
+        <ScalarProperty Name="CodigoPais" ColumnName="CodigoPais" />
+        <ScalarProperty Name="CodigoDepartamento" ColumnName="CodigoDepartamento" />
+        <ScalarProperty Name="CodigoProvincia" ColumnName="CodigoProvincia" />
+        <ScalarProperty Name="CodigoLugar" ColumnName="CodigoLugar" />
+      </EndProperty>
+      <EndProperty Name="Clientes">
+        <ScalarProperty Name="CodigoCliente" ColumnName="CodigoCliente" />
+      </EndProperty>
+      <Condition ColumnName="CodigoPais" IsNull="false" />
+      <Condition ColumnName="CodigoDepartamento" IsNull="false" />
+      <Condition ColumnName="CodigoProvincia" IsNull="false" />
+      <Condition ColumnName="CodigoLugar" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__CuentasPo__Codig__74A69520" TypeName="AlvecoComercial10Model.FK__CuentasPo__Codig__74A69520" StoreEntitySet="CuentasPorCobrar">
+      <EndProperty Name="Clientes">
+        <ScalarProperty Name="CodigoCliente" ColumnName="CodigoCliente" />
+      </EndProperty>
+      <EndProperty Name="CuentasPorCobrar">
+        <ScalarProperty Name="NumeroCuentaPorCobrar" ColumnName="NumeroCuentaPorCobrar" />
+      </EndProperty>
+      <Condition ColumnName="CodigoCliente" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_VentasProductosFuncionarios" TypeName="AlvecoComercial10Model.FK_VentasProductosFuncionarios" StoreEntitySet="VentasProductos">
+      <EndProperty Name="Clientes">
+        <ScalarProperty Name="CodigoCliente" ColumnName="CodigoCliente" />
+      </EndProperty>
+      <EndProperty Name="VentasProductos">
+        <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+        <ScalarProperty Name="NumeroVentaProducto" ColumnName="NumeroVentaProducto" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_ComprasProductos" TypeName="AlvecoComercial10Model.FK_ComprasProductos" StoreEntitySet="ComprasProductosDetalle">
+      <EndProperty Name="ComprasProductos">
+        <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+        <ScalarProperty Name="NumeroCompraProducto" ColumnName="NumeroCompraProducto" />
+      </EndProperty>
+      <EndProperty Name="ComprasProductosDetalle">
+        <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+        <ScalarProperty Name="NumeroCompraProducto" ColumnName="NumeroCompraProducto" />
+        <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_ComprasProductosCuentasPorPagar" TypeName="AlvecoComercial10Model.FK_ComprasProductosCuentasPorPagar" StoreEntitySet="ComprasProductos">
+      <EndProperty Name="CuentasPorPagar">
+        <ScalarProperty Name="NumeroCuentaPorPagar" ColumnName="NumeroCuentaPorPagar" />
+      </EndProperty>
+      <EndProperty Name="ComprasProductos">
+        <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+        <ScalarProperty Name="NumeroCompraProducto" ColumnName="NumeroCompraProducto" />
+      </EndProperty>
+      <Condition ColumnName="NumeroCuentaPorPagar" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_ComprasProductosDevoluciones" TypeName="AlvecoComercial10Model.FK_ComprasProductosDevoluciones" StoreEntitySet="ComprasProductosDevoluciones">
+      <EndProperty Name="ComprasProductos">
+        <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+        <ScalarProperty Name="NumeroCompraProducto" ColumnName="NumeroCompraProducto" />
+      </EndProperty>
+      <EndProperty Name="ComprasProductosDevoluciones">
+        <ScalarProperty Name="NumeroAlmacenDevolucion" ColumnName="NumeroAlmacenDevolucion" />
+        <ScalarProperty Name="NumeroCompraProductoDevolucion" ColumnName="NumeroCompraProductoDevolucion" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_ComprasProductosProveedores" TypeName="AlvecoComercial10Model.FK_ComprasProductosProveedores" StoreEntitySet="ComprasProductos">
+      <EndProperty Name="Proveedores">
+        <ScalarProperty Name="CodigoProveedor" ColumnName="CodigoProveedor" />
+      </EndProperty>
+      <EndProperty Name="ComprasProductos">
+        <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+        <ScalarProperty Name="NumeroCompraProducto" ColumnName="NumeroCompraProducto" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_ComprasProductosUsuarios" TypeName="AlvecoComercial10Model.FK_ComprasProductosUsuarios" StoreEntitySet="ComprasProductos">
+      <EndProperty Name="Usuarios">
+        <ScalarProperty Name="DIUsuario" ColumnName="DIUsuario" />
+      </EndProperty>
+      <EndProperty Name="ComprasProductos">
+        <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+        <ScalarProperty Name="NumeroCompraProducto" ColumnName="NumeroCompraProducto" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_ComprasProductosDetalle" TypeName="AlvecoComercial10Model.FK_ComprasProductosDetalle" StoreEntitySet="ComprasProductosDetalleEntrega">
+      <EndProperty Name="ComprasProductosDetalle">
+        <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+        <ScalarProperty Name="NumeroCompraProducto" ColumnName="NumeroCompraProducto" />
+        <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+      </EndProperty>
+      <EndProperty Name="ComprasProductosDetalleEntrega">
+        <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+        <ScalarProperty Name="NumeroCompraProducto" ColumnName="NumeroCompraProducto" />
+        <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+        <ScalarProperty Name="FechaHoraEntrega" ColumnName="FechaHoraEntrega" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_ComprasProductosDetalleProductos" TypeName="AlvecoComercial10Model.FK_ComprasProductosDetalleProductos" StoreEntitySet="ComprasProductosDetalle">
+      <EndProperty Name="Productos">
+        <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+      </EndProperty>
+      <EndProperty Name="ComprasProductosDetalle">
+        <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+        <ScalarProperty Name="NumeroCompraProducto" ColumnName="NumeroCompraProducto" />
+        <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_ComprasProductosDevolucionesDetalle" TypeName="AlvecoComercial10Model.FK_ComprasProductosDevolucionesDetalle" StoreEntitySet="ComprasProductosDevolucionesDetalle">
+      <EndProperty Name="ComprasProductosDevoluciones">
+        <ScalarProperty Name="NumeroAlmacenDevolucion" ColumnName="NumeroAlmacenDevolucion" />
+        <ScalarProperty Name="NumeroCompraProductoDevolucion" ColumnName="NumeroCompraProductoDevolucion" />
+      </EndProperty>
+      <EndProperty Name="ComprasProductosDevolucionesDetalle">
+        <ScalarProperty Name="NumeroAlmacenDevolucion" ColumnName="NumeroAlmacenDevolucion" />
+        <ScalarProperty Name="NumeroCompraProductoDevolucion" ColumnName="NumeroCompraProductoDevolucion" />
+        <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_ComprasProductosDevolucionesUsuarios" TypeName="AlvecoComercial10Model.FK_ComprasProductosDevolucionesUsuarios" StoreEntitySet="ComprasProductosDevoluciones">
+      <EndProperty Name="Usuarios">
+        <ScalarProperty Name="DIUsuario" ColumnName="DIUsuario" />
+      </EndProperty>
+      <EndProperty Name="ComprasProductosDevoluciones">
+        <ScalarProperty Name="NumeroAlmacenDevolucion" ColumnName="NumeroAlmacenDevolucion" />
+        <ScalarProperty Name="NumeroCompraProductoDevolucion" ColumnName="NumeroCompraProductoDevolucion" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_ComprasProductosDevolucionesDetalleProductos" TypeName="AlvecoComercial10Model.FK_ComprasProductosDevolucionesDetalleProductos" StoreEntitySet="ComprasProductosDevolucionesDetalle">
+      <EndProperty Name="Productos">
+        <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+      </EndProperty>
+      <EndProperty Name="ComprasProductosDevolucionesDetalle">
+        <ScalarProperty Name="NumeroAlmacenDevolucion" ColumnName="NumeroAlmacenDevolucion" />
+        <ScalarProperty Name="NumeroCompraProductoDevolucion" ColumnName="NumeroCompraProductoDevolucion" />
+        <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__CuentasPo__Numer__674C9A02" TypeName="AlvecoComercial10Model.FK__CuentasPo__Numer__674C9A02" StoreEntitySet="CuentasPorPagar">
+      <EndProperty Name="Conceptos">
+        <ScalarProperty Name="NumeroConcepto" ColumnName="NumeroConcepto" />
+      </EndProperty>
+      <EndProperty Name="CuentasPorPagar">
+        <ScalarProperty Name="NumeroCuentaPorPagar" ColumnName="NumeroCuentaPorPagar" />
+      </EndProperty>
+      <Condition ColumnName="NumeroConcepto" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__CuentasPo__Numer__73B270E7" TypeName="AlvecoComercial10Model.FK__CuentasPo__Numer__73B270E7" StoreEntitySet="CuentasPorCobrar">
+      <EndProperty Name="Conceptos">
+        <ScalarProperty Name="NumeroConcepto" ColumnName="NumeroConcepto" />
+      </EndProperty>
+      <EndProperty Name="CuentasPorCobrar">
+        <ScalarProperty Name="NumeroCuentaPorCobrar" ColumnName="NumeroCuentaPorCobrar" />
+      </EndProperty>
+      <Condition ColumnName="NumeroConcepto" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__CuentasPo__Numer__7A5F6E76" TypeName="AlvecoComercial10Model.FK__CuentasPo__Numer__7A5F6E76" StoreEntitySet="CuentasPorCobrarCobros">
+      <EndProperty Name="CuentasPorCobrar">
+        <ScalarProperty Name="NumeroCuentaPorCobrar" ColumnName="NumeroCuentaPorCobrar" />
+      </EndProperty>
+      <EndProperty Name="CuentasPorCobrarCobros">
+        <ScalarProperty Name="NumeroCuentaPorCobrar" ColumnName="NumeroCuentaPorCobrar" />
+        <ScalarProperty Name="NumeroCobro" ColumnName="NumeroCobro" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_VentasProductoCuentasPorCobrar" TypeName="AlvecoComercial10Model.FK_VentasProductoCuentasPorCobrar" StoreEntitySet="VentasProductos">
+      <EndProperty Name="CuentasPorCobrar">
+        <ScalarProperty Name="NumeroCuentaPorCobrar" ColumnName="NumeroCuentaPorCobrar" />
+      </EndProperty>
+      <EndProperty Name="VentasProductos">
+        <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+        <ScalarProperty Name="NumeroVentaProducto" ColumnName="NumeroVentaProducto" />
+      </EndProperty>
+      <Condition ColumnName="NumeroCuentaPorCobrar" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__CuentasPo__Codig__6840BE3B" TypeName="AlvecoComercial10Model.FK__CuentasPo__Codig__6840BE3B" StoreEntitySet="CuentasPorPagar">
+      <EndProperty Name="Proveedores">
+        <ScalarProperty Name="CodigoProveedor" ColumnName="CodigoProveedor" />
+      </EndProperty>
+      <EndProperty Name="CuentasPorPagar">
+        <ScalarProperty Name="NumeroCuentaPorPagar" ColumnName="NumeroCuentaPorPagar" />
+      </EndProperty>
+      <Condition ColumnName="CodigoProveedor" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__CuentasPo__Numer__6DF99791" TypeName="AlvecoComercial10Model.FK__CuentasPo__Numer__6DF99791" StoreEntitySet="CuentasPorPagarPagos">
+      <EndProperty Name="CuentasPorPagar">
+        <ScalarProperty Name="NumeroCuentaPorPagar" ColumnName="NumeroCuentaPorPagar" />
+      </EndProperty>
+      <EndProperty Name="CuentasPorPagarPagos">
+        <ScalarProperty Name="NumeroCuentaPorPagar" ColumnName="NumeroCuentaPorPagar" />
+        <ScalarProperty Name="NumeroPago" ColumnName="NumeroPago" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__Departame__Codig__11E126F5" TypeName="AlvecoComercial10Model.FK__Departame__Codig__11E126F5" StoreEntitySet="Departamentos">
+      <EndProperty Name="Paises">
+        <ScalarProperty Name="CodigoPais" ColumnName="CodigoPais" />
+      </EndProperty>
+      <EndProperty Name="Departamentos">
+        <ScalarProperty Name="CodigoPais" ColumnName="CodigoPais" />
+        <ScalarProperty Name="CodigoDepartamento" ColumnName="CodigoDepartamento" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__Provincias__16A5DC12" TypeName="AlvecoComercial10Model.FK__Provincias__16A5DC12" StoreEntitySet="Provincias">
+      <EndProperty Name="Departamentos">
+        <ScalarProperty Name="CodigoPais" ColumnName="CodigoPais" />
+        <ScalarProperty Name="CodigoDepartamento" ColumnName="CodigoDepartamento" />
+      </EndProperty>
+      <EndProperty Name="Provincias">
+        <ScalarProperty Name="CodigoPais" ColumnName="CodigoPais" />
+        <ScalarProperty Name="CodigoDepartamento" ColumnName="CodigoDepartamento" />
+        <ScalarProperty Name="CodigoProvincia" ColumnName="CodigoProvincia" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_InventariosProductos01" TypeName="AlvecoComercial10Model.FK_InventariosProductos01" StoreEntitySet="InventariosProductos">
+      <EndProperty Name="Productos">
+        <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+      </EndProperty>
+      <EndProperty Name="InventariosProductos">
+        <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+        <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__Lugares__1B6A912F" TypeName="AlvecoComercial10Model.FK__Lugares__1B6A912F" StoreEntitySet="Lugares">
+      <EndProperty Name="Provincias">
+        <ScalarProperty Name="CodigoPais" ColumnName="CodigoPais" />
+        <ScalarProperty Name="CodigoDepartamento" ColumnName="CodigoDepartamento" />
+        <ScalarProperty Name="CodigoProvincia" ColumnName="CodigoProvincia" />
+      </EndProperty>
+      <EndProperty Name="Lugares">
+        <ScalarProperty Name="CodigoPais" ColumnName="CodigoPais" />
+        <ScalarProperty Name="CodigoDepartamento" ColumnName="CodigoDepartamento" />
+        <ScalarProperty Name="CodigoProvincia" ColumnName="CodigoProvincia" />
+        <ScalarProperty Name="CodigoLugar" ColumnName="CodigoLugar" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_Lugares" TypeName="AlvecoComercial10Model.FK_Lugares" StoreEntitySet="Proveedores">
+      <EndProperty Name="Lugares">
+        <ScalarProperty Name="CodigoPais" ColumnName="CodigoPais" />
+        <ScalarProperty Name="CodigoDepartamento" ColumnName="CodigoDepartamento" />
+        <ScalarProperty Name="CodigoProvincia" ColumnName="CodigoProvincia" />
+        <ScalarProperty Name="CodigoLugar" ColumnName="CodigoLugar" />
+      </EndProperty>
+      <EndProperty Name="Proveedores">
+        <ScalarProperty Name="CodigoProveedor" ColumnName="CodigoProveedor" />
+      </EndProperty>
+      <Condition ColumnName="CodigoPais" IsNull="false" />
+      <Condition ColumnName="CodigoDepartamento" IsNull="false" />
+      <Condition ColumnName="CodigoProvincia" IsNull="false" />
+      <Condition ColumnName="CodigoLugar" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_PL02" TypeName="AlvecoComercial10Model.FK_PL02" StoreEntitySet="Personas">
+      <EndProperty Name="Lugares">
+        <ScalarProperty Name="CodigoPais" ColumnName="CodigoPaisD" />
+        <ScalarProperty Name="CodigoDepartamento" ColumnName="CodigoDepartamentoD" />
+        <ScalarProperty Name="CodigoProvincia" ColumnName="CodigoProvinciaD" />
+        <ScalarProperty Name="CodigoLugar" ColumnName="CodigoLugarD" />
+      </EndProperty>
+      <EndProperty Name="Personas">
+        <ScalarProperty Name="DIPersona" ColumnName="DIPersona" />
+      </EndProperty>
+      <Condition ColumnName="CodigoPaisD" IsNull="false" />
+      <Condition ColumnName="CodigoDepartamentoD" IsNull="false" />
+      <Condition ColumnName="CodigoProvinciaD" IsNull="false" />
+      <Condition ColumnName="CodigoLugarD" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_Movilidades_Marcas" TypeName="AlvecoComercial10Model.FK_Movilidades_Marcas" StoreEntitySet="Movilidades">
+      <EndProperty Name="ProductosMarcas">
+        <ScalarProperty Name="CodigoMarca" ColumnName="CodigoMarca" />
+      </EndProperty>
+      <EndProperty Name="Movilidades">
+        <ScalarProperty Name="CodigoMovilidad" ColumnName="CodigoMovilidad" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_Movilidades_Modelos" TypeName="AlvecoComercial10Model.FK_Movilidades_Modelos" StoreEntitySet="Movilidades">
+      <EndProperty Name="MovilidadesModelos">
+        <ScalarProperty Name="CodigoModelo" ColumnName="CodigoModelo" />
+      </EndProperty>
+      <EndProperty Name="Movilidades">
+        <ScalarProperty Name="CodigoMovilidad" ColumnName="CodigoMovilidad" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_VentasProductosMovilidades" TypeName="AlvecoComercial10Model.FK_VentasProductosMovilidades" StoreEntitySet="VentasProductos">
+      <EndProperty Name="Movilidades">
+        <ScalarProperty Name="CodigoMovilidad" ColumnName="CodigoMovilidad" />
+      </EndProperty>
+      <EndProperty Name="VentasProductos">
+        <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+        <ScalarProperty Name="NumeroVentaProducto" ColumnName="NumeroVentaProducto" />
+      </EndProperty>
+      <Condition ColumnName="CodigoMovilidad" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__Usuarios__DIUsua__29B8B086" TypeName="AlvecoComercial10Model.FK__Usuarios__DIUsua__29B8B086" StoreEntitySet="Usuarios">
+      <EndProperty Name="Personas">
+        <ScalarProperty Name="DIPersona" ColumnName="DIUsuario" />
+      </EndProperty>
+      <EndProperty Name="Usuarios">
+        <ScalarProperty Name="DIUsuario" ColumnName="DIUsuario" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_VentasProductoPersonas" TypeName="AlvecoComercial10Model.FK_VentasProductoPersonas" StoreEntitySet="VentasProductos">
+      <EndProperty Name="Personas">
+        <ScalarProperty Name="DIPersona" ColumnName="DIPersonaDistribuidor" />
+      </EndProperty>
+      <EndProperty Name="VentasProductos">
+        <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+        <ScalarProperty Name="NumeroVentaProducto" ColumnName="NumeroVentaProducto" />
+      </EndProperty>
+      <Condition ColumnName="DIPersonaDistribuidor" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__Productos__Codig__4EEA3535" TypeName="AlvecoComercial10Model.FK__Productos__Codig__4EEA3535" StoreEntitySet="Productos">
+      <EndProperty Name="ProductosTipos">
+        <ScalarProperty Name="CodigoProductoTipo" ColumnName="CodigoProductoTipo" />
+      </EndProperty>
+      <EndProperty Name="Productos">
+        <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__Productos__Codig__4FDE596E" TypeName="AlvecoComercial10Model.FK__Productos__Codig__4FDE596E" StoreEntitySet="Productos">
+      <EndProperty Name="ProductosMarcas">
+        <ScalarProperty Name="CodigoMarca" ColumnName="CodigoMarcaProducto" />
+      </EndProperty>
+      <EndProperty Name="Productos">
+        <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+      </EndProperty>
+      <Condition ColumnName="CodigoMarcaProducto" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__Productos__Codig__50D27DA7" TypeName="AlvecoComercial10Model.FK__Productos__Codig__50D27DA7" StoreEntitySet="Productos">
+      <EndProperty Name="ProductosUnidades">
+        <ScalarProperty Name="CodigoUnidad" ColumnName="CodigoUnidadProducto" />
+      </EndProperty>
+      <EndProperty Name="Productos">
+        <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_VentasProductosDevolucionesDetalleProductos" TypeName="AlvecoComercial10Model.FK_VentasProductosDevolucionesDetalleProductos" StoreEntitySet="VentasProductosDevolucionesDetalle">
+      <EndProperty Name="Productos">
+        <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+      </EndProperty>
+      <EndProperty Name="VentasProductosDevolucionesDetalle">
+        <ScalarProperty Name="NumeroAlmacenDevolucion" ColumnName="NumeroAlmacenDevolucion" />
+        <ScalarProperty Name="NumeroVentaProductoDevolucion" ColumnName="NumeroVentaProductoDevolucion" />
+        <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_VPDProductos" TypeName="AlvecoComercial10Model.FK_VPDProductos" StoreEntitySet="VentasProductosDetalle">
+      <EndProperty Name="Productos">
+        <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+      </EndProperty>
+      <EndProperty Name="VentasProductosDetalle">
+        <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+        <ScalarProperty Name="NumeroVentaProducto" ColumnName="NumeroVentaProducto" />
+        <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_VentasProductosDevolucionesUsuarios" TypeName="AlvecoComercial10Model.FK_VentasProductosDevolucionesUsuarios" StoreEntitySet="VentasProductosDevoluciones">
+      <EndProperty Name="Usuarios">
+        <ScalarProperty Name="DIUsuario" ColumnName="DIUsuario" />
+      </EndProperty>
+      <EndProperty Name="VentasProductosDevoluciones">
+        <ScalarProperty Name="NumeroAlmacenDevolucion" ColumnName="NumeroAlmacenDevolucion" />
+        <ScalarProperty Name="NumeroVentaProductoDevolucion" ColumnName="NumeroVentaProductoDevolucion" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_VentasProductosUsuarios" TypeName="AlvecoComercial10Model.FK_VentasProductosUsuarios" StoreEntitySet="VentasProductos">
+      <EndProperty Name="Usuarios">
+        <ScalarProperty Name="DIUsuario" ColumnName="DIUsuario" />
+      </EndProperty>
+      <EndProperty Name="VentasProductos">
+        <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+        <ScalarProperty Name="NumeroVentaProducto" ColumnName="NumeroVentaProducto" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_VentasProductosDevoluciones" TypeName="AlvecoComercial10Model.FK_VentasProductosDevoluciones" StoreEntitySet="VentasProductosDevoluciones">
+      <EndProperty Name="VentasProductos">
+        <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+        <ScalarProperty Name="NumeroVentaProducto" ColumnName="NumeroVentaProducto" />
+      </EndProperty>
+      <EndProperty Name="VentasProductosDevoluciones">
+        <ScalarProperty Name="NumeroAlmacenDevolucion" ColumnName="NumeroAlmacenDevolucion" />
+        <ScalarProperty Name="NumeroVentaProductoDevolucion" ColumnName="NumeroVentaProductoDevolucion" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_VPDVentasProductos" TypeName="AlvecoComercial10Model.FK_VPDVentasProductos" StoreEntitySet="VentasProductosDetalle">
+      <EndProperty Name="VentasProductos">
+        <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+        <ScalarProperty Name="NumeroVentaProducto" ColumnName="NumeroVentaProducto" />
+      </EndProperty>
+      <EndProperty Name="VentasProductosDetalle">
+        <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+        <ScalarProperty Name="NumeroVentaProducto" ColumnName="NumeroVentaProducto" />
+        <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_VentasProductosDetalle" TypeName="AlvecoComercial10Model.FK_VentasProductosDetalle" StoreEntitySet="VentasProductosDetalleEntrega">
+      <EndProperty Name="VentasProductosDetalle">
+        <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+        <ScalarProperty Name="NumeroVentaProducto" ColumnName="NumeroVentaProducto" />
+        <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+      </EndProperty>
+      <EndProperty Name="VentasProductosDetalleEntrega">
+        <ScalarProperty Name="NumeroAlmacen" ColumnName="NumeroAlmacen" />
+        <ScalarProperty Name="NumeroVentaProducto" ColumnName="NumeroVentaProducto" />
+        <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+        <ScalarProperty Name="FechaHoraEntrega" ColumnName="FechaHoraEntrega" />
+        <ScalarProperty Name="FechaHoraCompraInventario" ColumnName="FechaHoraCompraInventario" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK_VentasProductosDevolucionesDetalle" TypeName="AlvecoComercial10Model.FK_VentasProductosDevolucionesDetalle" StoreEntitySet="VentasProductosDevolucionesDetalle">
+      <EndProperty Name="VentasProductosDevoluciones">
+        <ScalarProperty Name="NumeroAlmacenDevolucion" ColumnName="NumeroAlmacenDevolucion" />
+        <ScalarProperty Name="NumeroVentaProductoDevolucion" ColumnName="NumeroVentaProductoDevolucion" />
+      </EndProperty>
+      <EndProperty Name="VentasProductosDevolucionesDetalle">
+        <ScalarProperty Name="NumeroAlmacenDevolucion" ColumnName="NumeroAlmacenDevolucion" />
+        <ScalarProperty Name="NumeroVentaProductoDevolucion" ColumnName="NumeroVentaProductoDevolucion" />
+        <ScalarProperty Name="CodigoProducto" ColumnName="CodigoProducto" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

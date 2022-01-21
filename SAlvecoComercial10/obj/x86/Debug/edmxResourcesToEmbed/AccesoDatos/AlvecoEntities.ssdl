@@ -1,0 +1,1285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AlvecoComercial10Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+  <EntityContainer Name="AlvecoComercial10ModelStoreContainer">
+    <EntitySet Name="Almacenes" EntityType="AlvecoComercial10Model.Store.Almacenes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Bitacora" EntityType="AlvecoComercial10Model.Store.Bitacora" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Clientes" EntityType="AlvecoComercial10Model.Store.Clientes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ComprasProductos" EntityType="AlvecoComercial10Model.Store.ComprasProductos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ComprasProductosDetalle" EntityType="AlvecoComercial10Model.Store.ComprasProductosDetalle" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ComprasProductosDetalleEntrega" EntityType="AlvecoComercial10Model.Store.ComprasProductosDetalleEntrega" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ComprasProductosDevoluciones" EntityType="AlvecoComercial10Model.Store.ComprasProductosDevoluciones" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ComprasProductosDevolucionesDetalle" EntityType="AlvecoComercial10Model.Store.ComprasProductosDevolucionesDetalle" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Conceptos" EntityType="AlvecoComercial10Model.Store.Conceptos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CuentasPorCobrar" EntityType="AlvecoComercial10Model.Store.CuentasPorCobrar" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CuentasPorCobrarCobros" EntityType="AlvecoComercial10Model.Store.CuentasPorCobrarCobros" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CuentasPorPagar" EntityType="AlvecoComercial10Model.Store.CuentasPorPagar" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CuentasPorPagarPagos" EntityType="AlvecoComercial10Model.Store.CuentasPorPagarPagos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Departamentos" EntityType="AlvecoComercial10Model.Store.Departamentos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InventariosProductos" EntityType="AlvecoComercial10Model.Store.InventariosProductos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InventariosProductosCantidadesTransaccionesHistorial" EntityType="AlvecoComercial10Model.Store.InventariosProductosCantidadesTransaccionesHistorial" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Lugares" EntityType="AlvecoComercial10Model.Store.Lugares" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Movilidades" EntityType="AlvecoComercial10Model.Store.Movilidades" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MovilidadesModelos" EntityType="AlvecoComercial10Model.Store.MovilidadesModelos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Paises" EntityType="AlvecoComercial10Model.Store.Paises" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Personas" EntityType="AlvecoComercial10Model.Store.Personas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Productos" EntityType="AlvecoComercial10Model.Store.Productos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductosMarcas" EntityType="AlvecoComercial10Model.Store.ProductosMarcas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductosTipos" EntityType="AlvecoComercial10Model.Store.ProductosTipos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductosUnidades" EntityType="AlvecoComercial10Model.Store.ProductosUnidades" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Proveedores" EntityType="AlvecoComercial10Model.Store.Proveedores" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Provincias" EntityType="AlvecoComercial10Model.Store.Provincias" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Usuarios" EntityType="AlvecoComercial10Model.Store.Usuarios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VentasProductos" EntityType="AlvecoComercial10Model.Store.VentasProductos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VentasProductosDetalle" EntityType="AlvecoComercial10Model.Store.VentasProductosDetalle" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VentasProductosDetalleEntrega" EntityType="AlvecoComercial10Model.Store.VentasProductosDetalleEntrega" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VentasProductosDevoluciones" EntityType="AlvecoComercial10Model.Store.VentasProductosDevoluciones" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VentasProductosDevolucionesDetalle" EntityType="AlvecoComercial10Model.Store.VentasProductosDevolucionesDetalle" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__Clientes__361E876B" Association="AlvecoComercial10Model.Store.FK__Clientes__361E876B">
+      <End Role="Lugares" EntitySet="Lugares" />
+      <End Role="Clientes" EntitySet="Clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentasPo__Codig__6840BE3B" Association="AlvecoComercial10Model.Store.FK__CuentasPo__Codig__6840BE3B">
+      <End Role="Proveedores" EntitySet="Proveedores" />
+      <End Role="CuentasPorPagar" EntitySet="CuentasPorPagar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentasPo__Codig__74A69520" Association="AlvecoComercial10Model.Store.FK__CuentasPo__Codig__74A69520">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="CuentasPorCobrar" EntitySet="CuentasPorCobrar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentasPo__Numer__665875C9" Association="AlvecoComercial10Model.Store.FK__CuentasPo__Numer__665875C9">
+      <End Role="Almacenes" EntitySet="Almacenes" />
+      <End Role="CuentasPorPagar" EntitySet="CuentasPorPagar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentasPo__Numer__674C9A02" Association="AlvecoComercial10Model.Store.FK__CuentasPo__Numer__674C9A02">
+      <End Role="Conceptos" EntitySet="Conceptos" />
+      <End Role="CuentasPorPagar" EntitySet="CuentasPorPagar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentasPo__Numer__6DF99791" Association="AlvecoComercial10Model.Store.FK__CuentasPo__Numer__6DF99791">
+      <End Role="CuentasPorPagar" EntitySet="CuentasPorPagar" />
+      <End Role="CuentasPorPagarPagos" EntitySet="CuentasPorPagarPagos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentasPo__Numer__72BE4CAE" Association="AlvecoComercial10Model.Store.FK__CuentasPo__Numer__72BE4CAE">
+      <End Role="Almacenes" EntitySet="Almacenes" />
+      <End Role="CuentasPorCobrar" EntitySet="CuentasPorCobrar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentasPo__Numer__73B270E7" Association="AlvecoComercial10Model.Store.FK__CuentasPo__Numer__73B270E7">
+      <End Role="Conceptos" EntitySet="Conceptos" />
+      <End Role="CuentasPorCobrar" EntitySet="CuentasPorCobrar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentasPo__Numer__7A5F6E76" Association="AlvecoComercial10Model.Store.FK__CuentasPo__Numer__7A5F6E76">
+      <End Role="CuentasPorCobrar" EntitySet="CuentasPorCobrar" />
+      <End Role="CuentasPorCobrarCobros" EntitySet="CuentasPorCobrarCobros" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Departame__Codig__11E126F5" Association="AlvecoComercial10Model.Store.FK__Departame__Codig__11E126F5">
+      <End Role="Paises" EntitySet="Paises" />
+      <End Role="Departamentos" EntitySet="Departamentos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Lugares__1B6A912F" Association="AlvecoComercial10Model.Store.FK__Lugares__1B6A912F">
+      <End Role="Provincias" EntitySet="Provincias" />
+      <End Role="Lugares" EntitySet="Lugares" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Productos__Codig__4EEA3535" Association="AlvecoComercial10Model.Store.FK__Productos__Codig__4EEA3535">
+      <End Role="ProductosTipos" EntitySet="ProductosTipos" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Productos__Codig__4FDE596E" Association="AlvecoComercial10Model.Store.FK__Productos__Codig__4FDE596E">
+      <End Role="ProductosMarcas" EntitySet="ProductosMarcas" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Productos__Codig__50D27DA7" Association="AlvecoComercial10Model.Store.FK__Productos__Codig__50D27DA7">
+      <End Role="ProductosUnidades" EntitySet="ProductosUnidades" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Provincias__16A5DC12" Association="AlvecoComercial10Model.Store.FK__Provincias__16A5DC12">
+      <End Role="Departamentos" EntitySet="Departamentos" />
+      <End Role="Provincias" EntitySet="Provincias" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuarios__DIUsua__29B8B086" Association="AlvecoComercial10Model.Store.FK__Usuarios__DIUsua__29B8B086">
+      <End Role="Personas" EntitySet="Personas" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComprasProductos" Association="AlvecoComercial10Model.Store.FK_ComprasProductos">
+      <End Role="ComprasProductos" EntitySet="ComprasProductos" />
+      <End Role="ComprasProductosDetalle" EntitySet="ComprasProductosDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComprasProductosAlmacenes" Association="AlvecoComercial10Model.Store.FK_ComprasProductosAlmacenes">
+      <End Role="Almacenes" EntitySet="Almacenes" />
+      <End Role="ComprasProductos" EntitySet="ComprasProductos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComprasProductosCuentasPorPagar" Association="AlvecoComercial10Model.Store.FK_ComprasProductosCuentasPorPagar">
+      <End Role="CuentasPorPagar" EntitySet="CuentasPorPagar" />
+      <End Role="ComprasProductos" EntitySet="ComprasProductos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComprasProductosDetalle" Association="AlvecoComercial10Model.Store.FK_ComprasProductosDetalle">
+      <End Role="ComprasProductosDetalle" EntitySet="ComprasProductosDetalle" />
+      <End Role="ComprasProductosDetalleEntrega" EntitySet="ComprasProductosDetalleEntrega" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComprasProductosDetalleProductos" Association="AlvecoComercial10Model.Store.FK_ComprasProductosDetalleProductos">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="ComprasProductosDetalle" EntitySet="ComprasProductosDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComprasProductosDevoluciones" Association="AlvecoComercial10Model.Store.FK_ComprasProductosDevoluciones">
+      <End Role="ComprasProductos" EntitySet="ComprasProductos" />
+      <End Role="ComprasProductosDevoluciones" EntitySet="ComprasProductosDevoluciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComprasProductosDevolucionesDetalle" Association="AlvecoComercial10Model.Store.FK_ComprasProductosDevolucionesDetalle">
+      <End Role="ComprasProductosDevoluciones" EntitySet="ComprasProductosDevoluciones" />
+      <End Role="ComprasProductosDevolucionesDetalle" EntitySet="ComprasProductosDevolucionesDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComprasProductosDevolucionesDetalleProductos" Association="AlvecoComercial10Model.Store.FK_ComprasProductosDevolucionesDetalleProductos">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="ComprasProductosDevolucionesDetalle" EntitySet="ComprasProductosDevolucionesDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComprasProductosDevolucionesUsuarios" Association="AlvecoComercial10Model.Store.FK_ComprasProductosDevolucionesUsuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="ComprasProductosDevoluciones" EntitySet="ComprasProductosDevoluciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComprasProductosProveedores" Association="AlvecoComercial10Model.Store.FK_ComprasProductosProveedores">
+      <End Role="Proveedores" EntitySet="Proveedores" />
+      <End Role="ComprasProductos" EntitySet="ComprasProductos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComprasProductosUsuarios" Association="AlvecoComercial10Model.Store.FK_ComprasProductosUsuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="ComprasProductos" EntitySet="ComprasProductos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InventariosProductos01" Association="AlvecoComercial10Model.Store.FK_InventariosProductos01">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="InventariosProductos" EntitySet="InventariosProductos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lugares" Association="AlvecoComercial10Model.Store.FK_Lugares">
+      <End Role="Lugares" EntitySet="Lugares" />
+      <End Role="Proveedores" EntitySet="Proveedores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Movilidades_Marcas" Association="AlvecoComercial10Model.Store.FK_Movilidades_Marcas">
+      <End Role="ProductosMarcas" EntitySet="ProductosMarcas" />
+      <End Role="Movilidades" EntitySet="Movilidades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Movilidades_Modelos" Association="AlvecoComercial10Model.Store.FK_Movilidades_Modelos">
+      <End Role="MovilidadesModelos" EntitySet="MovilidadesModelos" />
+      <End Role="Movilidades" EntitySet="Movilidades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PL02" Association="AlvecoComercial10Model.Store.FK_PL02">
+      <End Role="Lugares" EntitySet="Lugares" />
+      <End Role="Personas" EntitySet="Personas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasProductoCuentasPorCobrar" Association="AlvecoComercial10Model.Store.FK_VentasProductoCuentasPorCobrar">
+      <End Role="CuentasPorCobrar" EntitySet="CuentasPorCobrar" />
+      <End Role="VentasProductos" EntitySet="VentasProductos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasProductoPersonas" Association="AlvecoComercial10Model.Store.FK_VentasProductoPersonas">
+      <End Role="Personas" EntitySet="Personas" />
+      <End Role="VentasProductos" EntitySet="VentasProductos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasProductosAlmacenes" Association="AlvecoComercial10Model.Store.FK_VentasProductosAlmacenes">
+      <End Role="Almacenes" EntitySet="Almacenes" />
+      <End Role="VentasProductos" EntitySet="VentasProductos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasProductosDetalle" Association="AlvecoComercial10Model.Store.FK_VentasProductosDetalle">
+      <End Role="VentasProductosDetalle" EntitySet="VentasProductosDetalle" />
+      <End Role="VentasProductosDetalleEntrega" EntitySet="VentasProductosDetalleEntrega" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasProductosDevoluciones" Association="AlvecoComercial10Model.Store.FK_VentasProductosDevoluciones">
+      <End Role="VentasProductos" EntitySet="VentasProductos" />
+      <End Role="VentasProductosDevoluciones" EntitySet="VentasProductosDevoluciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasProductosDevolucionesDetalle" Association="AlvecoComercial10Model.Store.FK_VentasProductosDevolucionesDetalle">
+      <End Role="VentasProductosDevoluciones" EntitySet="VentasProductosDevoluciones" />
+      <End Role="VentasProductosDevolucionesDetalle" EntitySet="VentasProductosDevolucionesDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasProductosDevolucionesDetalleProductos" Association="AlvecoComercial10Model.Store.FK_VentasProductosDevolucionesDetalleProductos">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="VentasProductosDevolucionesDetalle" EntitySet="VentasProductosDevolucionesDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasProductosDevolucionesUsuarios" Association="AlvecoComercial10Model.Store.FK_VentasProductosDevolucionesUsuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="VentasProductosDevoluciones" EntitySet="VentasProductosDevoluciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasProductosFuncionarios" Association="AlvecoComercial10Model.Store.FK_VentasProductosFuncionarios">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="VentasProductos" EntitySet="VentasProductos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasProductosMovilidades" Association="AlvecoComercial10Model.Store.FK_VentasProductosMovilidades">
+      <End Role="Movilidades" EntitySet="Movilidades" />
+      <End Role="VentasProductos" EntitySet="VentasProductos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasProductosUsuarios" Association="AlvecoComercial10Model.Store.FK_VentasProductosUsuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="VentasProductos" EntitySet="VentasProductos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VPDProductos" Association="AlvecoComercial10Model.Store.FK_VPDProductos">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="VentasProductosDetalle" EntitySet="VentasProductosDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VPDVentasProductos" Association="AlvecoComercial10Model.Store.FK_VPDVentasProductos">
+      <End Role="VentasProductos" EntitySet="VentasProductos" />
+      <End Role="VentasProductosDetalle" EntitySet="VentasProductosDetalle" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Almacenes">
+    <Key>
+      <PropertyRef Name="NumeroAlmacen" />
+    </Key>
+    <Property Name="NumeroAlmacen" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NombreAlmacen" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="Descripcion" Type="text" />
+  </EntityType>
+  <EntityType Name="Bitacora">
+    <Key>
+      <PropertyRef Name="BitacoraID" />
+    </Key>
+    <Property Name="BitacoraID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EventType" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="EventInfo" Type="nvarchar" Nullable="false" />
+    <Property Name="Usuario" Type="varchar" MaxLength="200" />
+    <Property Name="Fecha" Type="datetime" />
+    <Property Name="ValoresInsertados" Type="text" />
+    <Property Name="ValoresEliminados" Type="text" />
+  </EntityType>
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="CodigoCliente" />
+    </Key>
+    <Property Name="CodigoCliente" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NombreCliente" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="NombreRepresentante" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CodigoTipoCliente" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="NITCliente" Type="varchar" MaxLength="30" />
+    <Property Name="CodigoPais" Type="char" MaxLength="2" />
+    <Property Name="CodigoDepartamento" Type="char" MaxLength="2" />
+    <Property Name="CodigoProvincia" Type="char" MaxLength="2" />
+    <Property Name="CodigoLugar" Type="char" MaxLength="3" />
+    <Property Name="Direccion" Type="varchar" MaxLength="250" />
+    <Property Name="Telefono" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="text" />
+    <Property Name="Observaciones" Type="text" />
+    <Property Name="CodigoEstadoCliente" Type="char" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="ComprasProductos">
+    <Key>
+      <PropertyRef Name="NumeroAlmacen" />
+      <PropertyRef Name="NumeroCompraProducto" />
+    </Key>
+    <Property Name="NumeroAlmacen" Type="int" Nullable="false" />
+    <Property Name="NumeroCompraProducto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CodigoCompraProducto" Type="char" MaxLength="12" />
+    <Property Name="CodigoProveedor" Type="int" Nullable="false" />
+    <Property Name="DIUsuario" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="FechaHoraRegistro" Type="datetime" Nullable="false" />
+    <Property Name="FechaHoraRecepcion" Type="datetime" />
+    <Property Name="CodigoTipoCompra" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CodigoEstadoCompra" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="NumeroFactura" Type="varchar" MaxLength="100" />
+    <Property Name="NumeroComprobante" Type="varchar" MaxLength="100" />
+    <Property Name="MontoTotalCompra" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="MontoTotalPagoEfectivo" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="NumeroCuentaPorPagar" Type="int" />
+    <Property Name="Observaciones" Type="text" />
+  </EntityType>
+  <EntityType Name="ComprasProductosDetalle">
+    <Key>
+      <PropertyRef Name="NumeroAlmacen" />
+      <PropertyRef Name="NumeroCompraProducto" />
+      <PropertyRef Name="CodigoProducto" />
+    </Key>
+    <Property Name="NumeroAlmacen" Type="int" Nullable="false" />
+    <Property Name="NumeroCompraProducto" Type="int" Nullable="false" />
+    <Property Name="CodigoProducto" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="CantidadCompra" Type="int" Nullable="false" />
+    <Property Name="CantidadEntregada" Type="int" Nullable="false" />
+    <Property Name="PrecioUnitarioCompra" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="TiempoGarantiaCompra" Type="int" />
+  </EntityType>
+  <EntityType Name="ComprasProductosDetalleEntrega">
+    <Key>
+      <PropertyRef Name="NumeroAlmacen" />
+      <PropertyRef Name="NumeroCompraProducto" />
+      <PropertyRef Name="CodigoProducto" />
+      <PropertyRef Name="FechaHoraEntrega" />
+    </Key>
+    <Property Name="NumeroAlmacen" Type="int" Nullable="false" />
+    <Property Name="NumeroCompraProducto" Type="int" Nullable="false" />
+    <Property Name="CodigoProducto" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="CantidadEntregada" Type="int" Nullable="false" />
+    <Property Name="FechaHoraEntrega" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ComprasProductosDevoluciones">
+    <Key>
+      <PropertyRef Name="NumeroAlmacenDevolucion" />
+      <PropertyRef Name="NumeroCompraProductoDevolucion" />
+    </Key>
+    <Property Name="NumeroAlmacenDevolucion" Type="int" Nullable="false" />
+    <Property Name="NumeroCompraProductoDevolucion" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CodigoDevolucionCompraProducto" Type="char" MaxLength="12" />
+    <Property Name="DIUsuario" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="FechaHoraRegistro" Type="datetime" Nullable="false" />
+    <Property Name="CodigoEstadoCompraDevolucion" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="MontoTotalCompraDevolucion" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="MontoTotalPagoEfectivo" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="NumeroCompraProducto" Type="int" Nullable="false" />
+    <Property Name="NumeroAlmacen" Type="int" Nullable="false" />
+    <Property Name="FechaHoraDevolucion" Type="datetime" />
+    <Property Name="Observaciones" Type="text" />
+  </EntityType>
+  <EntityType Name="ComprasProductosDevolucionesDetalle">
+    <Key>
+      <PropertyRef Name="NumeroAlmacenDevolucion" />
+      <PropertyRef Name="NumeroCompraProductoDevolucion" />
+      <PropertyRef Name="CodigoProducto" />
+    </Key>
+    <Property Name="NumeroAlmacenDevolucion" Type="int" Nullable="false" />
+    <Property Name="NumeroCompraProductoDevolucion" Type="int" Nullable="false" />
+    <Property Name="CodigoProducto" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="CantidadCompraDevolucion" Type="int" Nullable="false" />
+    <Property Name="PrecioUnitarioDevolucion" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Conceptos">
+    <Key>
+      <PropertyRef Name="NumeroConcepto" />
+    </Key>
+    <Property Name="NumeroConcepto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Concepto" Type="varchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="CuentasPorCobrar">
+    <Key>
+      <PropertyRef Name="NumeroCuentaPorCobrar" />
+    </Key>
+    <Property Name="NumeroCuentaPorCobrar" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NumeroAlmacen" Type="int" Nullable="false" />
+    <Property Name="FechaHoraRegistro" Type="datetime" Nullable="false" />
+    <Property Name="NumeroConcepto" Type="int" />
+    <Property Name="CodigoCliente" Type="int" />
+    <Property Name="Monto" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="FechaLimite" Type="datetime" />
+    <Property Name="CodigoEstado" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="Observaciones" Type="text" />
+    <Property Name="DIUsuario" Type="char" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="CuentasPorCobrarCobros">
+    <Key>
+      <PropertyRef Name="NumeroCuentaPorCobrar" />
+      <PropertyRef Name="NumeroCobro" />
+    </Key>
+    <Property Name="NumeroCuentaPorCobrar" Type="int" Nullable="false" />
+    <Property Name="NumeroCobro" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FechaHoraCobro" Type="datetime" Nullable="false" />
+    <Property Name="Monto" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="DIUsuario" Type="char" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="CuentasPorPagar">
+    <Key>
+      <PropertyRef Name="NumeroCuentaPorPagar" />
+    </Key>
+    <Property Name="NumeroCuentaPorPagar" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NumeroAlmacen" Type="int" Nullable="false" />
+    <Property Name="FechaHoraRegistro" Type="datetime" Nullable="false" />
+    <Property Name="CodigoProveedor" Type="int" />
+    <Property Name="NumeroConcepto" Type="int" />
+    <Property Name="Monto" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="FechaLimite" Type="datetime" />
+    <Property Name="CodigoEstado" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="Observaciones" Type="text" />
+    <Property Name="DIUsuario" Type="char" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="CuentasPorPagarPagos">
+    <Key>
+      <PropertyRef Name="NumeroCuentaPorPagar" />
+      <PropertyRef Name="NumeroPago" />
+    </Key>
+    <Property Name="NumeroCuentaPorPagar" Type="int" Nullable="false" />
+    <Property Name="NumeroPago" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FechaHoraPago" Type="datetime" Nullable="false" />
+    <Property Name="Monto" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="DIUsuario" Type="char" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Departamentos">
+    <Key>
+      <PropertyRef Name="CodigoPais" />
+      <PropertyRef Name="CodigoDepartamento" />
+    </Key>
+    <Property Name="CodigoPais" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CodigoDepartamento" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="NombreDepartamento" Type="varchar" Nullable="false" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="InventariosProductos">
+    <Key>
+      <PropertyRef Name="NumeroAlmacen" />
+      <PropertyRef Name="CodigoProducto" />
+    </Key>
+    <Property Name="NumeroAlmacen" Type="int" Nullable="false" />
+    <Property Name="CodigoProducto" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="CantidadExistencia" Type="int" Nullable="false" />
+    <Property Name="CantidadRequerida" Type="int" Nullable="false" />
+    <Property Name="PrecioUnitarioCompra" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="PrecioUnitarioVentaPorMayor" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="PrecioUnitarioVentaPorMenor" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="PorcentajeGananciaVentaPorMayor" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="PorcentajeGananciaVentaPorMenor" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="TiempoGarantiaProducto" Type="int" Nullable="false" />
+    <Property Name="StockMinimo" Type="int" Nullable="false" />
+    <Property Name="FechaHoraIngresoInventario" Type="date" />
+    <Property Name="PrecioValoradoTotal" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="InventariosProductosCantidadesTransaccionesHistorial">
+    <Key>
+      <PropertyRef Name="NumeroAlmacen" />
+      <PropertyRef Name="NumeroTransaccionProducto" />
+      <PropertyRef Name="CodigoProducto" />
+      <PropertyRef Name="FechaHoraCompra" />
+    </Key>
+    <Property Name="NumeroAlmacen" Type="int" Nullable="false" />
+    <Property Name="NumeroTransaccionProducto" Type="int" Nullable="false" />
+    <Property Name="CodigoProducto" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="CodigoTipoTransaccion" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="FechaHoraCompra" Type="datetime" Nullable="false" />
+    <Property Name="CantidadExistente" Type="int" Nullable="false" />
+    <Property Name="PrecioUnitario" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Lugares">
+    <Key>
+      <PropertyRef Name="CodigoPais" />
+      <PropertyRef Name="CodigoDepartamento" />
+      <PropertyRef Name="CodigoProvincia" />
+      <PropertyRef Name="CodigoLugar" />
+    </Key>
+    <Property Name="CodigoPais" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CodigoDepartamento" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CodigoProvincia" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CodigoLugar" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="NombreLugar" Type="varchar" Nullable="false" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Movilidades">
+    <Key>
+      <PropertyRef Name="CodigoMovilidad" />
+    </Key>
+    <Property Name="CodigoMovilidad" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="NombreMovilidad" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="CodigoPlaca" Type="char" MaxLength="20" />
+    <Property Name="CodigoMarca" Type="int" Nullable="false" />
+    <Property Name="CodigoModelo" Type="int" Nullable="false" />
+    <Property Name="CodigoEstadoMovilidad" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="Descripcion" Type="text" />
+  </EntityType>
+  <EntityType Name="MovilidadesModelos">
+    <Key>
+      <PropertyRef Name="CodigoModelo" />
+    </Key>
+    <Property Name="CodigoModelo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NombreModelo" Type="varchar" Nullable="false" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Paises">
+    <Key>
+      <PropertyRef Name="CodigoPais" />
+    </Key>
+    <Property Name="CodigoPais" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="NombrePais" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="Nacionalidad" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Personas">
+    <Key>
+      <PropertyRef Name="DIPersona" />
+    </Key>
+    <Property Name="DIPersona" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="Paterno" Type="varchar" MaxLength="40" />
+    <Property Name="Materno" Type="varchar" MaxLength="40" />
+    <Property Name="Nombres" Type="varchar" Nullable="false" MaxLength="80" />
+    <Property Name="FechaNacimiento" Type="datetime" />
+    <Property Name="Sexo" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="EstadoCivil" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="Celular" Type="varchar" MaxLength="30" />
+    <Property Name="Email" Type="text" />
+    <Property Name="CodigoPaisD" Type="char" MaxLength="2" />
+    <Property Name="CodigoDepartamentoD" Type="char" MaxLength="2" />
+    <Property Name="CodigoProvinciaD" Type="char" MaxLength="2" />
+    <Property Name="CodigoLugarD" Type="char" MaxLength="3" />
+    <Property Name="DireccionD" Type="varchar" MaxLength="250" />
+    <Property Name="TelefonoD" Type="varchar" MaxLength="30" />
+    <Property Name="Observaciones" Type="text" />
+  </EntityType>
+  <EntityType Name="Productos">
+    <Key>
+      <PropertyRef Name="CodigoProducto" />
+    </Key>
+    <Property Name="CodigoProducto" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="CodigoProductoFabricante" Type="char" Nullable="false" MaxLength="30" />
+    <Property Name="NombreProducto" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="NombreProductoAlternativo" Type="varchar" MaxLength="250" />
+    <Property Name="CodigoProductoTipo" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="CodigoMarcaProducto" Type="int" />
+    <Property Name="CodigoUnidadProducto" Type="int" Nullable="false" />
+    <Property Name="CodigoTipoCalculoInventario" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="ActualizarPrecioVenta" Type="bit" />
+    <Property Name="Descripcion" Type="text" />
+    <Property Name="Observaciones" Type="text" />
+    <Property Name="CodigoProveedor" Type="int" />
+  </EntityType>
+  <EntityType Name="ProductosMarcas">
+    <Key>
+      <PropertyRef Name="CodigoMarca" />
+    </Key>
+    <Property Name="CodigoMarca" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NombreMarca" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CodigoTipoMarca" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="ProductosTipos">
+    <Key>
+      <PropertyRef Name="CodigoProductoTipo" />
+    </Key>
+    <Property Name="CodigoProductoTipo" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="CodigoProductoTipoPadre" Type="char" MaxLength="10" />
+    <Property Name="NombreProductoTipo" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="DescripcionProductoTipo" Type="text" />
+  </EntityType>
+  <EntityType Name="ProductosUnidades">
+    <Key>
+      <PropertyRef Name="CodigoUnidad" />
+    </Key>
+    <Property Name="CodigoUnidad" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NombreUnidad" Type="varchar" Nullable="false" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Proveedores">
+    <Key>
+      <PropertyRef Name="CodigoProveedor" />
+    </Key>
+    <Property Name="CodigoProveedor" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NombreRazonSocial" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="NombreRepresentante" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CodigoTipoProveedor" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="NITProveedor" Type="varchar" MaxLength="30" />
+    <Property Name="CodigoPais" Type="char" MaxLength="2" />
+    <Property Name="CodigoDepartamento" Type="char" MaxLength="2" />
+    <Property Name="CodigoProvincia" Type="char" MaxLength="2" />
+    <Property Name="CodigoLugar" Type="char" MaxLength="3" />
+    <Property Name="Direccion" Type="varchar" MaxLength="250" />
+    <Property Name="Telefono" Type="varchar" MaxLength="50" />
+    <Property Name="Fax" Type="varchar" MaxLength="50" />
+    <Property Name="Casilla" Type="char" MaxLength="15" />
+    <Property Name="Email" Type="text" />
+    <Property Name="PorcentajeGananciaVentaPorMayor" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="PorcentajeGananciaVentaPorMenor" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Observaciones" Type="text" />
+    <Property Name="ProveedorActivo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Provincias">
+    <Key>
+      <PropertyRef Name="CodigoPais" />
+      <PropertyRef Name="CodigoDepartamento" />
+      <PropertyRef Name="CodigoProvincia" />
+    </Key>
+    <Property Name="CodigoPais" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CodigoDepartamento" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="CodigoProvincia" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="NombreProvincia" Type="varchar" Nullable="false" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="DIUsuario" />
+    </Key>
+    <Property Name="DIUsuario" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="NombreUsuario" Type="char" Nullable="false" MaxLength="32" />
+    <Property Name="FechaRegistro" Type="datetime" />
+    <Property Name="Observaciones" Type="text" />
+    <Property Name="Contrasena" Type="varbinary" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="VentasProductos">
+    <Key>
+      <PropertyRef Name="NumeroAlmacen" />
+      <PropertyRef Name="NumeroVentaProducto" />
+    </Key>
+    <Property Name="NumeroAlmacen" Type="int" Nullable="false" />
+    <Property Name="NumeroVentaProducto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CodigoVentaProducto" Type="char" MaxLength="12" />
+    <Property Name="CodigoCliente" Type="int" Nullable="false" />
+    <Property Name="DIUsuario" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="FechaHoraVenta" Type="datetime" Nullable="false" />
+    <Property Name="FechaHoraEntrega" Type="datetime" />
+    <Property Name="NumeroComprobante" Type="varchar" MaxLength="100" />
+    <Property Name="CodigoEstadoVenta" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CodigoTipoVenta" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="NumeroFactura" Type="varchar" MaxLength="100" />
+    <Property Name="MontoTotalVenta" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="MontoTotalPagoEfectivo" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="DIPersonaDistribuidor" Type="char" MaxLength="15" />
+    <Property Name="VentaParaDistribuir" Type="bit" />
+    <Property Name="CodigoMovilidad" Type="varchar" MaxLength="10" />
+    <Property Name="MontoTotalDescuento" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="NumeroCuentaPorCobrar" Type="int" />
+    <Property Name="EsVentaDistribuible" Type="bit" />
+    <Property Name="Observaciones" Type="text" />
+  </EntityType>
+  <EntityType Name="VentasProductosDetalle">
+    <Key>
+      <PropertyRef Name="NumeroAlmacen" />
+      <PropertyRef Name="NumeroVentaProducto" />
+      <PropertyRef Name="CodigoProducto" />
+    </Key>
+    <Property Name="NumeroAlmacen" Type="int" Nullable="false" />
+    <Property Name="NumeroVentaProducto" Type="int" Nullable="false" />
+    <Property Name="CodigoProducto" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="CantidadVenta" Type="int" Nullable="false" />
+    <Property Name="CantidadEntregada" Type="int" Nullable="false" />
+    <Property Name="PrecioUnitarioVenta" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="PorcentajeDescuento" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="TiempoGarantiaVenta" Type="int" />
+  </EntityType>
+  <EntityType Name="VentasProductosDetalleEntrega">
+    <Key>
+      <PropertyRef Name="NumeroAlmacen" />
+      <PropertyRef Name="NumeroVentaProducto" />
+      <PropertyRef Name="CodigoProducto" />
+      <PropertyRef Name="FechaHoraEntrega" />
+      <PropertyRef Name="FechaHoraCompraInventario" />
+    </Key>
+    <Property Name="NumeroAlmacen" Type="int" Nullable="false" />
+    <Property Name="NumeroVentaProducto" Type="int" Nullable="false" />
+    <Property Name="CodigoProducto" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="FechaHoraEntrega" Type="datetime" Nullable="false" />
+    <Property Name="FechaHoraCompraInventario" Type="datetime" Nullable="false" />
+    <Property Name="CantidadEntregada" Type="int" Nullable="false" />
+    <Property Name="PrecioUnitarioCompraInventario" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="VentasProductosDevoluciones">
+    <Key>
+      <PropertyRef Name="NumeroAlmacenDevolucion" />
+      <PropertyRef Name="NumeroVentaProductoDevolucion" />
+    </Key>
+    <Property Name="NumeroAlmacenDevolucion" Type="int" Nullable="false" />
+    <Property Name="NumeroVentaProductoDevolucion" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CodigoDevolucionVentaProducto" Type="char" MaxLength="12" />
+    <Property Name="DIUsuario" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="FechaHoraRegistro" Type="datetime" Nullable="false" />
+    <Property Name="CodigoEstadoVentaDevolucion" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="MontoTotalVentaDevolucion" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="MontoTotalPagoEfectivo" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="NumeroVentaProducto" Type="int" Nullable="false" />
+    <Property Name="NumeroAlmacen" Type="int" Nullable="false" />
+    <Property Name="FechaHoraDevolucion" Type="datetime" />
+    <Property Name="Observaciones" Type="text" />
+  </EntityType>
+  <EntityType Name="VentasProductosDevolucionesDetalle">
+    <Key>
+      <PropertyRef Name="NumeroAlmacenDevolucion" />
+      <PropertyRef Name="NumeroVentaProductoDevolucion" />
+      <PropertyRef Name="CodigoProducto" />
+    </Key>
+    <Property Name="NumeroAlmacenDevolucion" Type="int" Nullable="false" />
+    <Property Name="NumeroVentaProductoDevolucion" Type="int" Nullable="false" />
+    <Property Name="CodigoProducto" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="CantidadVentaDevolucion" Type="int" Nullable="false" />
+    <Property Name="PrecioUnitarioDevolucion" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+  </EntityType>
+  <Association Name="FK__Clientes__361E876B">
+    <End Role="Lugares" Type="AlvecoComercial10Model.Store.Lugares" Multiplicity="0..1" />
+    <End Role="Clientes" Type="AlvecoComercial10Model.Store.Clientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lugares">
+        <PropertyRef Name="CodigoPais" />
+        <PropertyRef Name="CodigoDepartamento" />
+        <PropertyRef Name="CodigoProvincia" />
+        <PropertyRef Name="CodigoLugar" />
+      </Principal>
+      <Dependent Role="Clientes">
+        <PropertyRef Name="CodigoPais" />
+        <PropertyRef Name="CodigoDepartamento" />
+        <PropertyRef Name="CodigoProvincia" />
+        <PropertyRef Name="CodigoLugar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentasPo__Codig__6840BE3B">
+    <End Role="Proveedores" Type="AlvecoComercial10Model.Store.Proveedores" Multiplicity="0..1" />
+    <End Role="CuentasPorPagar" Type="AlvecoComercial10Model.Store.CuentasPorPagar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedores">
+        <PropertyRef Name="CodigoProveedor" />
+      </Principal>
+      <Dependent Role="CuentasPorPagar">
+        <PropertyRef Name="CodigoProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentasPo__Codig__74A69520">
+    <End Role="Clientes" Type="AlvecoComercial10Model.Store.Clientes" Multiplicity="0..1" />
+    <End Role="CuentasPorCobrar" Type="AlvecoComercial10Model.Store.CuentasPorCobrar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clientes">
+        <PropertyRef Name="CodigoCliente" />
+      </Principal>
+      <Dependent Role="CuentasPorCobrar">
+        <PropertyRef Name="CodigoCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentasPo__Numer__665875C9">
+    <End Role="Almacenes" Type="AlvecoComercial10Model.Store.Almacenes" Multiplicity="1" />
+    <End Role="CuentasPorPagar" Type="AlvecoComercial10Model.Store.CuentasPorPagar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Almacenes">
+        <PropertyRef Name="NumeroAlmacen" />
+      </Principal>
+      <Dependent Role="CuentasPorPagar">
+        <PropertyRef Name="NumeroAlmacen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentasPo__Numer__674C9A02">
+    <End Role="Conceptos" Type="AlvecoComercial10Model.Store.Conceptos" Multiplicity="0..1" />
+    <End Role="CuentasPorPagar" Type="AlvecoComercial10Model.Store.CuentasPorPagar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Conceptos">
+        <PropertyRef Name="NumeroConcepto" />
+      </Principal>
+      <Dependent Role="CuentasPorPagar">
+        <PropertyRef Name="NumeroConcepto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentasPo__Numer__6DF99791">
+    <End Role="CuentasPorPagar" Type="AlvecoComercial10Model.Store.CuentasPorPagar" Multiplicity="1" />
+    <End Role="CuentasPorPagarPagos" Type="AlvecoComercial10Model.Store.CuentasPorPagarPagos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CuentasPorPagar">
+        <PropertyRef Name="NumeroCuentaPorPagar" />
+      </Principal>
+      <Dependent Role="CuentasPorPagarPagos">
+        <PropertyRef Name="NumeroCuentaPorPagar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentasPo__Numer__72BE4CAE">
+    <End Role="Almacenes" Type="AlvecoComercial10Model.Store.Almacenes" Multiplicity="1" />
+    <End Role="CuentasPorCobrar" Type="AlvecoComercial10Model.Store.CuentasPorCobrar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Almacenes">
+        <PropertyRef Name="NumeroAlmacen" />
+      </Principal>
+      <Dependent Role="CuentasPorCobrar">
+        <PropertyRef Name="NumeroAlmacen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentasPo__Numer__73B270E7">
+    <End Role="Conceptos" Type="AlvecoComercial10Model.Store.Conceptos" Multiplicity="0..1" />
+    <End Role="CuentasPorCobrar" Type="AlvecoComercial10Model.Store.CuentasPorCobrar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Conceptos">
+        <PropertyRef Name="NumeroConcepto" />
+      </Principal>
+      <Dependent Role="CuentasPorCobrar">
+        <PropertyRef Name="NumeroConcepto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentasPo__Numer__7A5F6E76">
+    <End Role="CuentasPorCobrar" Type="AlvecoComercial10Model.Store.CuentasPorCobrar" Multiplicity="1" />
+    <End Role="CuentasPorCobrarCobros" Type="AlvecoComercial10Model.Store.CuentasPorCobrarCobros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CuentasPorCobrar">
+        <PropertyRef Name="NumeroCuentaPorCobrar" />
+      </Principal>
+      <Dependent Role="CuentasPorCobrarCobros">
+        <PropertyRef Name="NumeroCuentaPorCobrar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Departame__Codig__11E126F5">
+    <End Role="Paises" Type="AlvecoComercial10Model.Store.Paises" Multiplicity="1" />
+    <End Role="Departamentos" Type="AlvecoComercial10Model.Store.Departamentos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Paises">
+        <PropertyRef Name="CodigoPais" />
+      </Principal>
+      <Dependent Role="Departamentos">
+        <PropertyRef Name="CodigoPais" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Lugares__1B6A912F">
+    <End Role="Provincias" Type="AlvecoComercial10Model.Store.Provincias" Multiplicity="1" />
+    <End Role="Lugares" Type="AlvecoComercial10Model.Store.Lugares" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Provincias">
+        <PropertyRef Name="CodigoPais" />
+        <PropertyRef Name="CodigoDepartamento" />
+        <PropertyRef Name="CodigoProvincia" />
+      </Principal>
+      <Dependent Role="Lugares">
+        <PropertyRef Name="CodigoPais" />
+        <PropertyRef Name="CodigoDepartamento" />
+        <PropertyRef Name="CodigoProvincia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Productos__Codig__4EEA3535">
+    <End Role="ProductosTipos" Type="AlvecoComercial10Model.Store.ProductosTipos" Multiplicity="1" />
+    <End Role="Productos" Type="AlvecoComercial10Model.Store.Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductosTipos">
+        <PropertyRef Name="CodigoProductoTipo" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="CodigoProductoTipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Productos__Codig__4FDE596E">
+    <End Role="ProductosMarcas" Type="AlvecoComercial10Model.Store.ProductosMarcas" Multiplicity="0..1" />
+    <End Role="Productos" Type="AlvecoComercial10Model.Store.Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductosMarcas">
+        <PropertyRef Name="CodigoMarca" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="CodigoMarcaProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Productos__Codig__50D27DA7">
+    <End Role="ProductosUnidades" Type="AlvecoComercial10Model.Store.ProductosUnidades" Multiplicity="1" />
+    <End Role="Productos" Type="AlvecoComercial10Model.Store.Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductosUnidades">
+        <PropertyRef Name="CodigoUnidad" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="CodigoUnidadProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Provincias__16A5DC12">
+    <End Role="Departamentos" Type="AlvecoComercial10Model.Store.Departamentos" Multiplicity="1" />
+    <End Role="Provincias" Type="AlvecoComercial10Model.Store.Provincias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamentos">
+        <PropertyRef Name="CodigoPais" />
+        <PropertyRef Name="CodigoDepartamento" />
+      </Principal>
+      <Dependent Role="Provincias">
+        <PropertyRef Name="CodigoPais" />
+        <PropertyRef Name="CodigoDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuarios__DIUsua__29B8B086">
+    <End Role="Personas" Type="AlvecoComercial10Model.Store.Personas" Multiplicity="1" />
+    <End Role="Usuarios" Type="AlvecoComercial10Model.Store.Usuarios" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Personas">
+        <PropertyRef Name="DIPersona" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="DIUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComprasProductos">
+    <End Role="ComprasProductos" Type="AlvecoComercial10Model.Store.ComprasProductos" Multiplicity="1" />
+    <End Role="ComprasProductosDetalle" Type="AlvecoComercial10Model.Store.ComprasProductosDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ComprasProductos">
+        <PropertyRef Name="NumeroAlmacen" />
+        <PropertyRef Name="NumeroCompraProducto" />
+      </Principal>
+      <Dependent Role="ComprasProductosDetalle">
+        <PropertyRef Name="NumeroAlmacen" />
+        <PropertyRef Name="NumeroCompraProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComprasProductosAlmacenes">
+    <End Role="Almacenes" Type="AlvecoComercial10Model.Store.Almacenes" Multiplicity="1" />
+    <End Role="ComprasProductos" Type="AlvecoComercial10Model.Store.ComprasProductos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Almacenes">
+        <PropertyRef Name="NumeroAlmacen" />
+      </Principal>
+      <Dependent Role="ComprasProductos">
+        <PropertyRef Name="NumeroAlmacen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComprasProductosCuentasPorPagar">
+    <End Role="CuentasPorPagar" Type="AlvecoComercial10Model.Store.CuentasPorPagar" Multiplicity="0..1" />
+    <End Role="ComprasProductos" Type="AlvecoComercial10Model.Store.ComprasProductos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CuentasPorPagar">
+        <PropertyRef Name="NumeroCuentaPorPagar" />
+      </Principal>
+      <Dependent Role="ComprasProductos">
+        <PropertyRef Name="NumeroCuentaPorPagar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComprasProductosDetalle">
+    <End Role="ComprasProductosDetalle" Type="AlvecoComercial10Model.Store.ComprasProductosDetalle" Multiplicity="1" />
+    <End Role="ComprasProductosDetalleEntrega" Type="AlvecoComercial10Model.Store.ComprasProductosDetalleEntrega" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ComprasProductosDetalle">
+        <PropertyRef Name="NumeroAlmacen" />
+        <PropertyRef Name="NumeroCompraProducto" />
+        <PropertyRef Name="CodigoProducto" />
+      </Principal>
+      <Dependent Role="ComprasProductosDetalleEntrega">
+        <PropertyRef Name="NumeroAlmacen" />
+        <PropertyRef Name="NumeroCompraProducto" />
+        <PropertyRef Name="CodigoProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComprasProductosDetalleProductos">
+    <End Role="Productos" Type="AlvecoComercial10Model.Store.Productos" Multiplicity="1" />
+    <End Role="ComprasProductosDetalle" Type="AlvecoComercial10Model.Store.ComprasProductosDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos">
+        <PropertyRef Name="CodigoProducto" />
+      </Principal>
+      <Dependent Role="ComprasProductosDetalle">
+        <PropertyRef Name="CodigoProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComprasProductosDevoluciones">
+    <End Role="ComprasProductos" Type="AlvecoComercial10Model.Store.ComprasProductos" Multiplicity="1" />
+    <End Role="ComprasProductosDevoluciones" Type="AlvecoComercial10Model.Store.ComprasProductosDevoluciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ComprasProductos">
+        <PropertyRef Name="NumeroAlmacen" />
+        <PropertyRef Name="NumeroCompraProducto" />
+      </Principal>
+      <Dependent Role="ComprasProductosDevoluciones">
+        <PropertyRef Name="NumeroAlmacen" />
+        <PropertyRef Name="NumeroCompraProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComprasProductosDevolucionesDetalle">
+    <End Role="ComprasProductosDevoluciones" Type="AlvecoComercial10Model.Store.ComprasProductosDevoluciones" Multiplicity="1" />
+    <End Role="ComprasProductosDevolucionesDetalle" Type="AlvecoComercial10Model.Store.ComprasProductosDevolucionesDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ComprasProductosDevoluciones">
+        <PropertyRef Name="NumeroAlmacenDevolucion" />
+        <PropertyRef Name="NumeroCompraProductoDevolucion" />
+      </Principal>
+      <Dependent Role="ComprasProductosDevolucionesDetalle">
+        <PropertyRef Name="NumeroAlmacenDevolucion" />
+        <PropertyRef Name="NumeroCompraProductoDevolucion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComprasProductosDevolucionesDetalleProductos">
+    <End Role="Productos" Type="AlvecoComercial10Model.Store.Productos" Multiplicity="1" />
+    <End Role="ComprasProductosDevolucionesDetalle" Type="AlvecoComercial10Model.Store.ComprasProductosDevolucionesDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos">
+        <PropertyRef Name="CodigoProducto" />
+      </Principal>
+      <Dependent Role="ComprasProductosDevolucionesDetalle">
+        <PropertyRef Name="CodigoProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComprasProductosDevolucionesUsuarios">
+    <End Role="Usuarios" Type="AlvecoComercial10Model.Store.Usuarios" Multiplicity="1" />
+    <End Role="ComprasProductosDevoluciones" Type="AlvecoComercial10Model.Store.ComprasProductosDevoluciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="DIUsuario" />
+      </Principal>
+      <Dependent Role="ComprasProductosDevoluciones">
+        <PropertyRef Name="DIUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComprasProductosProveedores">
+    <End Role="Proveedores" Type="AlvecoComercial10Model.Store.Proveedores" Multiplicity="1" />
+    <End Role="ComprasProductos" Type="AlvecoComercial10Model.Store.ComprasProductos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedores">
+        <PropertyRef Name="CodigoProveedor" />
+      </Principal>
+      <Dependent Role="ComprasProductos">
+        <PropertyRef Name="CodigoProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComprasProductosUsuarios">
+    <End Role="Usuarios" Type="AlvecoComercial10Model.Store.Usuarios" Multiplicity="1" />
+    <End Role="ComprasProductos" Type="AlvecoComercial10Model.Store.ComprasProductos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="DIUsuario" />
+      </Principal>
+      <Dependent Role="ComprasProductos">
+        <PropertyRef Name="DIUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InventariosProductos01">
+    <End Role="Productos" Type="AlvecoComercial10Model.Store.Productos" Multiplicity="1" />
+    <End Role="InventariosProductos" Type="AlvecoComercial10Model.Store.InventariosProductos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos">
+        <PropertyRef Name="CodigoProducto" />
+      </Principal>
+      <Dependent Role="InventariosProductos">
+        <PropertyRef Name="CodigoProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lugares">
+    <End Role="Lugares" Type="AlvecoComercial10Model.Store.Lugares" Multiplicity="0..1" />
+    <End Role="Proveedores" Type="AlvecoComercial10Model.Store.Proveedores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lugares">
+        <PropertyRef Name="CodigoPais" />
+        <PropertyRef Name="CodigoDepartamento" />
+        <PropertyRef Name="CodigoProvincia" />
+        <PropertyRef Name="CodigoLugar" />
+      </Principal>
+      <Dependent Role="Proveedores">
+        <PropertyRef Name="CodigoPais" />
+        <PropertyRef Name="CodigoDepartamento" />
+        <PropertyRef Name="CodigoProvincia" />
+        <PropertyRef Name="CodigoLugar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Movilidades_Marcas">
+    <End Role="ProductosMarcas" Type="AlvecoComercial10Model.Store.ProductosMarcas" Multiplicity="1" />
+    <End Role="Movilidades" Type="AlvecoComercial10Model.Store.Movilidades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductosMarcas">
+        <PropertyRef Name="CodigoMarca" />
+      </Principal>
+      <Dependent Role="Movilidades">
+        <PropertyRef Name="CodigoMarca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Movilidades_Modelos">
+    <End Role="MovilidadesModelos" Type="AlvecoComercial10Model.Store.MovilidadesModelos" Multiplicity="1" />
+    <End Role="Movilidades" Type="AlvecoComercial10Model.Store.Movilidades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MovilidadesModelos">
+        <PropertyRef Name="CodigoModelo" />
+      </Principal>
+      <Dependent Role="Movilidades">
+        <PropertyRef Name="CodigoModelo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PL02">
+    <End Role="Lugares" Type="AlvecoComercial10Model.Store.Lugares" Multiplicity="0..1" />
+    <End Role="Personas" Type="AlvecoComercial10Model.Store.Personas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lugares">
+        <PropertyRef Name="CodigoPais" />
+        <PropertyRef Name="CodigoDepartamento" />
+        <PropertyRef Name="CodigoProvincia" />
+        <PropertyRef Name="CodigoLugar" />
+      </Principal>
+      <Dependent Role="Personas">
+        <PropertyRef Name="CodigoPaisD" />
+        <PropertyRef Name="CodigoDepartamentoD" />
+        <PropertyRef Name="CodigoProvinciaD" />
+        <PropertyRef Name="CodigoLugarD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VentasProductoCuentasPorCobrar">
+    <End Role="CuentasPorCobrar" Type="AlvecoComercial10Model.Store.CuentasPorCobrar" Multiplicity="0..1" />
+    <End Role="VentasProductos" Type="AlvecoComercial10Model.Store.VentasProductos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CuentasPorCobrar">
+        <PropertyRef Name="NumeroCuentaPorCobrar" />
+      </Principal>
+      <Dependent Role="VentasProductos">
+        <PropertyRef Name="NumeroCuentaPorCobrar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VentasProductoPersonas">
+    <End Role="Personas" Type="AlvecoComercial10Model.Store.Personas" Multiplicity="0..1" />
+    <End Role="VentasProductos" Type="AlvecoComercial10Model.Store.VentasProductos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personas">
+        <PropertyRef Name="DIPersona" />
+      </Principal>
+      <Dependent Role="VentasProductos">
+        <PropertyRef Name="DIPersonaDistribuidor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VentasProductosAlmacenes">
+    <End Role="Almacenes" Type="AlvecoComercial10Model.Store.Almacenes" Multiplicity="1" />
+    <End Role="VentasProductos" Type="AlvecoComercial10Model.Store.VentasProductos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Almacenes">
+        <PropertyRef Name="NumeroAlmacen" />
+      </Principal>
+      <Dependent Role="VentasProductos">
+        <PropertyRef Name="NumeroAlmacen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VentasProductosDetalle">
+    <End Role="VentasProductosDetalle" Type="AlvecoComercial10Model.Store.VentasProductosDetalle" Multiplicity="1" />
+    <End Role="VentasProductosDetalleEntrega" Type="AlvecoComercial10Model.Store.VentasProductosDetalleEntrega" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VentasProductosDetalle">
+        <PropertyRef Name="NumeroAlmacen" />
+        <PropertyRef Name="NumeroVentaProducto" />
+        <PropertyRef Name="CodigoProducto" />
+      </Principal>
+      <Dependent Role="VentasProductosDetalleEntrega">
+        <PropertyRef Name="NumeroAlmacen" />
+        <PropertyRef Name="NumeroVentaProducto" />
+        <PropertyRef Name="CodigoProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VentasProductosDevoluciones">
+    <End Role="VentasProductos" Type="AlvecoComercial10Model.Store.VentasProductos" Multiplicity="1" />
+    <End Role="VentasProductosDevoluciones" Type="AlvecoComercial10Model.Store.VentasProductosDevoluciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VentasProductos">
+        <PropertyRef Name="NumeroAlmacen" />
+        <PropertyRef Name="NumeroVentaProducto" />
+      </Principal>
+      <Dependent Role="VentasProductosDevoluciones">
+        <PropertyRef Name="NumeroAlmacen" />
+        <PropertyRef Name="NumeroVentaProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VentasProductosDevolucionesDetalle">
+    <End Role="VentasProductosDevoluciones" Type="AlvecoComercial10Model.Store.VentasProductosDevoluciones" Multiplicity="1" />
+    <End Role="VentasProductosDevolucionesDetalle" Type="AlvecoComercial10Model.Store.VentasProductosDevolucionesDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VentasProductosDevoluciones">
+        <PropertyRef Name="NumeroAlmacenDevolucion" />
+        <PropertyRef Name="NumeroVentaProductoDevolucion" />
+      </Principal>
+      <Dependent Role="VentasProductosDevolucionesDetalle">
+        <PropertyRef Name="NumeroAlmacenDevolucion" />
+        <PropertyRef Name="NumeroVentaProductoDevolucion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VentasProductosDevolucionesDetalleProductos">
+    <End Role="Productos" Type="AlvecoComercial10Model.Store.Productos" Multiplicity="1" />
+    <End Role="VentasProductosDevolucionesDetalle" Type="AlvecoComercial10Model.Store.VentasProductosDevolucionesDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos">
+        <PropertyRef Name="CodigoProducto" />
+      </Principal>
+      <Dependent Role="VentasProductosDevolucionesDetalle">
+        <PropertyRef Name="CodigoProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VentasProductosDevolucionesUsuarios">
+    <End Role="Usuarios" Type="AlvecoComercial10Model.Store.Usuarios" Multiplicity="1" />
+    <End Role="VentasProductosDevoluciones" Type="AlvecoComercial10Model.Store.VentasProductosDevoluciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="DIUsuario" />
+      </Principal>
+      <Dependent Role="VentasProductosDevoluciones">
+        <PropertyRef Name="DIUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VentasProductosFuncionarios">
+    <End Role="Clientes" Type="AlvecoComercial10Model.Store.Clientes" Multiplicity="1" />
+    <End Role="VentasProductos" Type="AlvecoComercial10Model.Store.VentasProductos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clientes">
+        <PropertyRef Name="CodigoCliente" />
+      </Principal>
+      <Dependent Role="VentasProductos">
+        <PropertyRef Name="CodigoCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VentasProductosMovilidades">
+    <End Role="Movilidades" Type="AlvecoComercial10Model.Store.Movilidades" Multiplicity="0..1" />
+    <End Role="VentasProductos" Type="AlvecoComercial10Model.Store.VentasProductos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Movilidades">
+        <PropertyRef Name="CodigoMovilidad" />
+      </Principal>
+      <Dependent Role="VentasProductos">
+        <PropertyRef Name="CodigoMovilidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VentasProductosUsuarios">
+    <End Role="Usuarios" Type="AlvecoComercial10Model.Store.Usuarios" Multiplicity="1" />
+    <End Role="VentasProductos" Type="AlvecoComercial10Model.Store.VentasProductos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="DIUsuario" />
+      </Principal>
+      <Dependent Role="VentasProductos">
+        <PropertyRef Name="DIUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VPDProductos">
+    <End Role="Productos" Type="AlvecoComercial10Model.Store.Productos" Multiplicity="1" />
+    <End Role="VentasProductosDetalle" Type="AlvecoComercial10Model.Store.VentasProductosDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos">
+        <PropertyRef Name="CodigoProducto" />
+      </Principal>
+      <Dependent Role="VentasProductosDetalle">
+        <PropertyRef Name="CodigoProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VPDVentasProductos">
+    <End Role="VentasProductos" Type="AlvecoComercial10Model.Store.VentasProductos" Multiplicity="1" />
+    <End Role="VentasProductosDetalle" Type="AlvecoComercial10Model.Store.VentasProductosDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VentasProductos">
+        <PropertyRef Name="NumeroAlmacen" />
+        <PropertyRef Name="NumeroVentaProducto" />
+      </Principal>
+      <Dependent Role="VentasProductosDetalle">
+        <PropertyRef Name="NumeroAlmacen" />
+        <PropertyRef Name="NumeroVentaProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6037: La restricción de clave externa 'FK_ComprasProductosDevolucionesAlmacenes' se ha omitido en el modelo de almacenamiento. La columna 'NumeroAlmacen' de la tabla 'AlvecoComercial10Model.Store.ComprasProductosDevoluciones' es una clave externa que participa en varias relaciones. No se validará un modelo de entidad de uno a uno, ya que puede existir incoherencia en los datos.
+      
+      <Association Name="FK_ComprasProductosDevolucionesAlmacenes">
+        <End Role="Almacenes" Type="AlvecoComercial10Model.Store.Almacenes" Multiplicity="1" />
+        <End Role="ComprasProductosDevoluciones" Type="AlvecoComercial10Model.Store.ComprasProductosDevoluciones" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Almacenes">
+            <PropertyRef Name="NumeroAlmacen" />
+          </Principal>
+          <Dependent Role="ComprasProductosDevoluciones">
+            <PropertyRef Name="NumeroAlmacen" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      Se encontraron errores durante la generación:
+      advertencia 6037: La restricción de clave externa 'FK_VentasProductosDevolucionesAlmacenes' se ha omitido en el modelo de almacenamiento. La columna 'NumeroAlmacen' de la tabla 'AlvecoComercial10Model.Store.VentasProductosDevoluciones' es una clave externa que participa en varias relaciones. No se validará un modelo de entidad de uno a uno, ya que puede existir incoherencia en los datos.
+      
+      <Association Name="FK_VentasProductosDevolucionesAlmacenes">
+        <End Role="Almacenes" Type="AlvecoComercial10Model.Store.Almacenes" Multiplicity="1" />
+        <End Role="VentasProductosDevoluciones" Type="AlvecoComercial10Model.Store.VentasProductosDevoluciones" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Almacenes">
+            <PropertyRef Name="NumeroAlmacen" />
+          </Principal>
+          <Dependent Role="VentasProductosDevoluciones">
+            <PropertyRef Name="NumeroAlmacen" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>-->
+</Schema>

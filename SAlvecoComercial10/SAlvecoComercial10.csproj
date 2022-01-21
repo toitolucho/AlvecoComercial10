@@ -1,0 +1,1205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9466E359-132C-473D-9F0C-18F6A8C2397B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SAlvecoComercial10</RootNamespace>
+    <AssemblyName>SAlvecoComercial10</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccesoDatos\AlvecoComercial10DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlvecoComercial10DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\AlvecoEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlvecoEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FPrincipal.Designer.cs">
+      <DependentUpon>FPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FComprasProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FComprasProductos.Designer.cs">
+      <DependentUpon>FComprasProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FComprasProductosAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FComprasProductosAdministrador.designer.cs">
+      <DependentUpon>FComprasProductosAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FComprasProductosDevolucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FComprasProductosDevolucion.Designer.cs">
+      <DependentUpon>FComprasProductosDevolucion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FComprasProductosRecepcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FComprasProductosRecepcion.designer.cs">
+      <DependentUpon>FComprasProductosRecepcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FCuentasPorCobrarAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FCuentasPorCobrarAdministrador.Designer.cs">
+      <DependentUpon>FCuentasPorCobrarAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FCuentasPorCobrarIA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FCuentasPorCobrarIA.Designer.cs">
+      <DependentUpon>FCuentasPorCobrarIA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FCuentasPorPagarAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FCuentasPorPagarAdministrador.Designer.cs">
+      <DependentUpon>FCuentasPorPagarAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FCuentasPorPagarIA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FCuentasPorPagarIA.designer.cs">
+      <DependentUpon>FCuentasPorPagarIA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FDevolucionesAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FDevolucionesAdministrador.Designer.cs">
+      <DependentUpon>FDevolucionesAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FInventarioProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FInventarioProductos.Designer.cs">
+      <DependentUpon>FInventarioProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FSeleccionArticulosRangosFechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FSeleccionArticulosRangosFechas.designer.cs">
+      <DependentUpon>FSeleccionArticulosRangosFechas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FSeleccionFechasReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FSeleccionFechasReportes.designer.cs">
+      <DependentUpon>FSeleccionFechasReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FTransaccionesCuentasPorPagarCobrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FTransaccionesCuentasPorPagarCobrar.designer.cs">
+      <DependentUpon>FTransaccionesCuentasPorPagarCobrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FTransferenciasProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FTransferenciasProductos.Designer.cs">
+      <DependentUpon>FTransferenciasProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FTransferenciasProductosAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FTransferenciasProductosAdministrador.Designer.cs">
+      <DependentUpon>FTransferenciasProductosAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FVentasProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FVentasProductos.Designer.cs">
+      <DependentUpon>FVentasProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FVentasProductosAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FVentasProductosAdministrador.Designer.cs">
+      <DependentUpon>FVentasProductosAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FVentasProductosDevolucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FVentasProductosDevolucion.Designer.cs">
+      <DependentUpon>FVentasProductosDevolucion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FVentasProductosDistribucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FVentasProductosDistribucion.designer.cs">
+      <DependentUpon>FVentasProductosDistribucion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FVentasProductosDistribucionDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionComercial\FVentasProductosDistribucionDatos.Designer.cs">
+      <DependentUpon>FVentasProductosDistribucionDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FMovilidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FMovilidades.designer.cs">
+      <DependentUpon>FMovilidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FMovilidadesModelos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FMovilidadesModelos.designer.cs">
+      <DependentUpon>FMovilidadesModelos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FParametrosRangoFechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FParametrosRangoFechas.designer.cs">
+      <DependentUpon>FParametrosRangoFechas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FPersonas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FPersonas.Designer.cs">
+      <DependentUpon>FPersonas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarBitacoraReporte1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarBitacoraReporte1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarComprasProductosUsuarios1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarComprasProductosUsuarios1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarComprasProductosUsuarios2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarComprasProductosUsuarios2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarMovimientoDevoluciones1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarMovimientoDevoluciones1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarMovimientoMonetario.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarMovimientoMonetario.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarMovimientoMonetario2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarMovimientoMonetario2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarMovimientoMonetarioVentasDistribuibles.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarMovimientoMonetarioVentasDistribuibles.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarMovimientoTransaccionalProductos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarMovimientoTransaccionalProductos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarProductosPorTipo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarProductosPorTipo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarUsuariosPersonas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarUsuariosPersonas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarVentaProductoCuentasPorCobrarReporte.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarVentaProductoCuentasPorCobrarReporte.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarVentaProductoCuentasPorCobrarReportePorCliente.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarVentaProductoCuentasPorCobrarReportePorCliente.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarVentasMotivosDanios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarVentasMotivosDanios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarVentasProductosPersonasDistribucion2.cs">
+      <DependentUpon>CRListarVentasProductosPersonasDistribucion2.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRCuentasPorCobrarPagar.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRCuentasPorCobrarPagar.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRCuentasPorCobrarPagarPagosDetalle.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRCuentasPorCobrarPagarPagosDetalle.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRIngresosArticulosDevolucionGeneral.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRIngresosArticulosDevolucionGeneral.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarCompraProductoCuentasPorPagarReporte.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarCompraProductoCuentasPorPagarReporte.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarCompraProductoCuentasPorPagarReportePorProveedor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarCompraProductoCuentasPorPagarReportePorProveedor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarComprasProductosReportesPorFechasProveedor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarComprasProductosReportesPorFechasProveedor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarComprasProductosReportesPorFechasProveedor2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarComprasProductosReportesPorFechasProveedor2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarComprasProductosReportesPorFechasTipo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarComprasProductosReportesPorFechasTipo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarComprasProductosReportesPorFechasTipo2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarComprasProductosReportesPorFechasTipo2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarProductosEnTransitoPorPedido.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarProductosEnTransitoPorPedido.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarVentasProductosPersonasDistribucion1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarVentasProductosPersonasDistribucion1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarVentasProductosReportesPorCreditosFechasCliente.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarVentasProductosReportesPorCreditosFechasCliente.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarVentasProductosReportesPorFechasCliente.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarVentasProductosReportesPorFechasCliente.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarVentasProductosReportesPorFechasCliente2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarVentasProductosReportesPorFechasCliente2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarVentasProductosReportesPorFechasTipo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarVentasProductosReportesPorFechasTipo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarVentasProductosReportesPorFechasTipo2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarVentasProductosReportesPorFechasTipo2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarVentasProductosUsuarios1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarVentasProductosUsuarios1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarVentasProductosUsuarios2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarVentasProductosUsuarios2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRTransferenciaProductosGeneral.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRTransferenciaProductosGeneral.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\FReporteCuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\FReporteCuentas.Designer.cs">
+      <DependentUpon>FReporteCuentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\FReporteDatosAdministracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\FReporteDatosAdministracion.Designer.cs">
+      <DependentUpon>FReporteDatosAdministracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\FReporteInventarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\FReporteInventarios.Designer.cs">
+      <DependentUpon>FReporteInventarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FAlmacenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FAlmacenes.Designer.cs">
+      <DependentUpon>FAlmacenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FAutenticacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FAutenticacion.Designer.cs">
+      <DependentUpon>FAutenticacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FCambiarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FCambiarContraseña.designer.cs">
+      <DependentUpon>FCambiarContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FClientes.Designer.cs">
+      <DependentUpon>FClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FConceptos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FConceptos.Designer.cs">
+      <DependentUpon>FConceptos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FGeografico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FGeografico.designer.cs">
+      <DependentUpon>FGeografico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FProductos.Designer.cs">
+      <DependentUpon>FProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FProductosMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FProductosMarcas.Designer.cs">
+      <DependentUpon>FProductosMarcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FProductosTipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FProductosTipos.Designer.cs">
+      <DependentUpon>FProductosTipos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FProductosUnidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FProductosUnidades.Designer.cs">
+      <DependentUpon>FProductosUnidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FProveedores.Designer.cs">
+      <DependentUpon>FProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FSplash.designer.cs">
+      <DependentUpon>FSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionSistema\FUsuarios.Designer.cs">
+      <DependentUpon>FUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRIngresosArticulosGeneral.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRIngresosArticulosGeneral.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRInventarioArticulos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRInventarioArticulos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRKardexFisicoValoradoInventarioArticulos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRKardexFisicoValoradoInventarioArticulos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarArticulosRequeridos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarArticulosRequeridos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarMovimientoArticuloPorOficinaReportes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarMovimientoArticuloPorOficinaReportes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarMovimientoArticuloPorPartidaReporte.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarMovimientoArticuloPorPartidaReporte.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarMovimientoArticuloReporte.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarMovimientoArticuloReporte.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarMovimientosArticulosPorProveedorReportes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarMovimientosArticulosPorProveedorReportes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRListarSalidaArticuloPorFuncionario.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRListarSalidaArticuloPorFuncionario.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRSalidasArticulosDevolucionGeneral.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRSalidasArticulosDevolucionGeneral.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRSalidasArticulosGeneral.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRSalidasArticulosGeneral.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportesCR\CRSolicitudSalidaArticulosGeneral.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRSolicitudSalidaArticulosGeneral.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\FReporteGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\FReporteGeneral.Designer.cs">
+      <DependentUpon>FReporteGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\FReporteMovimientoTransacciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\FReporteMovimientoTransacciones.Designer.cs">
+      <DependentUpon>FReporteMovimientoTransacciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\FReporteTransaccionesGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\FReporteTransaccionesGeneral.Designer.cs">
+      <DependentUpon>FReporteTransaccionesGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Utilidades\Componentes\BindableToolStripLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Utilidades\Componentes\DataGridViewCalendarColumn .cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Utilidades\Componentes\DGVFilter\ColumnFilterEvent.cs" />
+    <Compile Include="Formularios\Utilidades\Componentes\DGVFilter\DgvBaseColumnFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formularios\Utilidades\Componentes\DGVFilter\DgvBaseFilterHost.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formularios\Utilidades\Componentes\DGVFilter\DgvFilterManager.cs" />
+    <Compile Include="Formularios\Utilidades\Componentes\DGVFilter\Extensions\DgvDateRangeColumnFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formularios\Utilidades\Componentes\DGVFilter\Extensions\DgvDateRangeColumnFilter.designer.cs">
+      <DependentUpon>DgvDateRangeColumnFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Utilidades\Componentes\DGVFilter\Extensions\DgvMonthYearColumnFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formularios\Utilidades\Componentes\DGVFilter\Extensions\DgvMonthYearColumnFilter.designer.cs">
+      <DependentUpon>DgvMonthYearColumnFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Utilidades\Componentes\DGVFilter\Extensions\DgvNumRangeColumnFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formularios\Utilidades\Componentes\DGVFilter\Extensions\DgvNumRangeColumnFilter.designer.cs">
+      <DependentUpon>DgvNumRangeColumnFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Utilidades\Componentes\DGVFilter\Implementations\DgvCheckBoxColumnFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formularios\Utilidades\Componentes\DGVFilter\Implementations\DgvCheckBoxColumnFilter.designer.cs">
+      <DependentUpon>DgvCheckBoxColumnFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Utilidades\Componentes\DGVFilter\Implementations\DgvComboBoxColumnFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formularios\Utilidades\Componentes\DGVFilter\Implementations\DgvComboBoxColumnFilter.designer.cs">
+      <DependentUpon>DgvComboBoxColumnFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Utilidades\Componentes\DGVFilter\Implementations\DgvDateColumnFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formularios\Utilidades\Componentes\DGVFilter\Implementations\DgvDateColumnFilter.designer.cs">
+      <DependentUpon>DgvDateColumnFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Utilidades\Componentes\DGVFilter\Implementations\DgvFilterHost.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formularios\Utilidades\Componentes\DGVFilter\Implementations\DgvFilterHost.designer.cs">
+      <DependentUpon>DgvFilterHost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Utilidades\Componentes\DGVFilter\Implementations\DgvTextBoxColumnFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formularios\Utilidades\Componentes\DGVFilter\Implementations\DgvTextBoxColumnFilter.designer.cs">
+      <DependentUpon>DgvTextBoxColumnFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Utilidades\DAOUtilidades.cs" />
+    <Compile Include="Formularios\Utilidades\EventosValidacionTexto.cs" />
+    <Compile Include="Formularios\Utilidades\FIngresarCantidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Utilidades\FIngresarCantidad.designer.cs">
+      <DependentUpon>FIngresarCantidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Utilidades\ObjetoCodigoDescripcion.cs" />
+    <Compile Include="Formularios\Utilidades\PanelBusquedaProductos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formularios\Utilidades\PanelBusquedaProductos.Designer.cs">
+      <DependentUpon>PanelBusquedaProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Utilidades\PanelBusquedaProductosDevolucion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formularios\Utilidades\PanelBusquedaProductosDevolucion.Designer.cs">
+      <DependentUpon>PanelBusquedaProductosDevolucion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\FPrincipal.resx">
+      <DependentUpon>FPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionComercial\FComprasProductos.resx">
+      <DependentUpon>FComprasProductos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionComercial\FComprasProductosAdministrador.resx">
+      <DependentUpon>FComprasProductosAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionComercial\FComprasProductosDevolucion.resx">
+      <DependentUpon>FComprasProductosDevolucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionComercial\FComprasProductosRecepcion.resx">
+      <DependentUpon>FComprasProductosRecepcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionComercial\FCuentasPorCobrarAdministrador.resx">
+      <DependentUpon>FCuentasPorCobrarAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionComercial\FCuentasPorCobrarIA.resx">
+      <DependentUpon>FCuentasPorCobrarIA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionComercial\FCuentasPorPagarAdministrador.resx">
+      <DependentUpon>FCuentasPorPagarAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionComercial\FCuentasPorPagarIA.resx">
+      <DependentUpon>FCuentasPorPagarIA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionComercial\FDevolucionesAdministrador.resx">
+      <DependentUpon>FDevolucionesAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionComercial\FInventarioProductos.resx">
+      <DependentUpon>FInventarioProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionComercial\FSeleccionArticulosRangosFechas.resx">
+      <DependentUpon>FSeleccionArticulosRangosFechas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionComercial\FSeleccionFechasReportes.resx">
+      <DependentUpon>FSeleccionFechasReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionComercial\FTransaccionesCuentasPorPagarCobrar.resx">
+      <DependentUpon>FTransaccionesCuentasPorPagarCobrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionComercial\FTransferenciasProductos.resx">
+      <DependentUpon>FTransferenciasProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionComercial\FVentasProductos.resx">
+      <DependentUpon>FVentasProductos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionComercial\FVentasProductosAdministrador.resx">
+      <DependentUpon>FVentasProductosAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionComercial\FVentasProductosDevolucion.resx">
+      <DependentUpon>FVentasProductosDevolucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionComercial\FVentasProductosDistribucion.resx">
+      <DependentUpon>FVentasProductosDistribucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionComercial\FVentasProductosDistribucionDatos.resx">
+      <DependentUpon>FVentasProductosDistribucionDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionSistema\FAlmacenes.resx">
+      <DependentUpon>FAlmacenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionSistema\FAutenticacion.resx">
+      <DependentUpon>FAutenticacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionSistema\FCambiarContraseña.resx">
+      <DependentUpon>FCambiarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionSistema\FClientes.resx">
+      <DependentUpon>FClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionSistema\FConceptos.resx">
+      <DependentUpon>FConceptos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionSistema\FGeografico.resx">
+      <DependentUpon>FGeografico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionSistema\FMovilidades.resx">
+      <DependentUpon>FMovilidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionSistema\FMovilidadesModelos.resx">
+      <DependentUpon>FMovilidadesModelos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionSistema\FParametrosRangoFechas.resx">
+      <DependentUpon>FParametrosRangoFechas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionSistema\FPersonas.resx">
+      <DependentUpon>FPersonas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionSistema\FProductos.resx">
+      <DependentUpon>FProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionSistema\FProductosMarcas.resx">
+      <DependentUpon>FProductosMarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionSistema\FProductosTipos.resx">
+      <DependentUpon>FProductosTipos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionSistema\FProductosUnidades.resx">
+      <DependentUpon>FProductosUnidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionSistema\FProveedores.resx">
+      <DependentUpon>FProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionSistema\FSplash.resx">
+      <DependentUpon>FSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionSistema\FUsuarios.resx">
+      <DependentUpon>FUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarBitacoraReporte1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarBitacoraReporte1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarComprasProductosUsuarios1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarComprasProductosUsuarios1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarComprasProductosUsuarios2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarComprasProductosUsuarios2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarMovimientoDevoluciones1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarMovimientoDevoluciones1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarMovimientoMonetario.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarMovimientoMonetario.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarMovimientoMonetario2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarMovimientoMonetario2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarMovimientoMonetarioVentasDistribuibles.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarMovimientoMonetarioVentasDistribuibles.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarMovimientoTransaccionalProductos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarMovimientoTransaccionalProductos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarProductosPorTipo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarProductosPorTipo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarUsuariosPersonas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarUsuariosPersonas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarVentaProductoCuentasPorCobrarReporte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarVentaProductoCuentasPorCobrarReporte.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarVentaProductoCuentasPorCobrarReportePorCliente.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarVentaProductoCuentasPorCobrarReportePorCliente.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarVentasMotivosDanios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarVentasMotivosDanios.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarVentasProductosPersonasDistribucion2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarVentasProductosPersonasDistribucion2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRCuentasPorCobrarPagar.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRCuentasPorCobrarPagar.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRCuentasPorCobrarPagarPagosDetalle.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRCuentasPorCobrarPagarPagosDetalle.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRIngresosArticulosDevolucionGeneral.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRIngresosArticulosDevolucionGeneral.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRIngresosArticulosGeneral.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRIngresosArticulosGeneral.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRInventarioArticulos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRInventarioArticulos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRKardexFisicoValoradoInventarioArticulos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRKardexFisicoValoradoInventarioArticulos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarArticulosRequeridos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarArticulosRequeridos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarCompraProductoCuentasPorPagarReporte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarCompraProductoCuentasPorPagarReporte.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarCompraProductoCuentasPorPagarReportePorProveedor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarCompraProductoCuentasPorPagarReportePorProveedor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarComprasProductosReportesPorFechasProveedor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarComprasProductosReportesPorFechasProveedor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarComprasProductosReportesPorFechasProveedor2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarComprasProductosReportesPorFechasProveedor2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarComprasProductosReportesPorFechasTipo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarComprasProductosReportesPorFechasTipo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarComprasProductosReportesPorFechasTipo2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarComprasProductosReportesPorFechasTipo2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarMovimientoArticuloPorOficinaReportes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarMovimientoArticuloPorOficinaReportes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarMovimientoArticuloPorPartidaReporte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarMovimientoArticuloPorPartidaReporte.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarMovimientoArticuloReporte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarMovimientoArticuloReporte.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarMovimientosArticulosPorProveedorReportes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarMovimientosArticulosPorProveedorReportes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarProductosEnTransitoPorPedido.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarProductosEnTransitoPorPedido.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarSalidaArticuloPorFuncionario.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarSalidaArticuloPorFuncionario.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarVentasProductosPersonasDistribucion1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarVentasProductosPersonasDistribucion1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarVentasProductosReportesPorCreditosFechasCliente.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarVentasProductosReportesPorCreditosFechasCliente.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarVentasProductosReportesPorFechasCliente.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarVentasProductosReportesPorFechasCliente.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarVentasProductosReportesPorFechasCliente2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarVentasProductosReportesPorFechasCliente2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarVentasProductosReportesPorFechasTipo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarVentasProductosReportesPorFechasTipo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarVentasProductosReportesPorFechasTipo2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarVentasProductosReportesPorFechasTipo2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarVentasProductosUsuarios1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarVentasProductosUsuarios1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRListarVentasProductosUsuarios2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRListarVentasProductosUsuarios2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRSalidasArticulosDevolucionGeneral.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRSalidasArticulosDevolucionGeneral.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRSalidasArticulosGeneral.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRSalidasArticulosGeneral.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRSolicitudSalidaArticulosGeneral.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRSolicitudSalidaArticulosGeneral.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportesCR\CRTransferenciaProductosGeneral.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRTransferenciaProductosGeneral.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\FReporteGeneral.resx">
+      <DependentUpon>FReporteGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Utilidades\Componentes\DGVFilter\Extensions\DgvDateRangeColumnFilter.resx">
+      <DependentUpon>DgvDateRangeColumnFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Utilidades\Componentes\DGVFilter\Extensions\DgvMonthYearColumnFilter.resx">
+      <DependentUpon>DgvMonthYearColumnFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Utilidades\Componentes\DGVFilter\Extensions\DgvNumRangeColumnFilter.resx">
+      <DependentUpon>DgvNumRangeColumnFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Utilidades\Componentes\DGVFilter\Implementations\DgvCheckBoxColumnFilter.resx">
+      <DependentUpon>DgvCheckBoxColumnFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Utilidades\Componentes\DGVFilter\Implementations\DgvComboBoxColumnFilter.resx">
+      <DependentUpon>DgvComboBoxColumnFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Utilidades\Componentes\DGVFilter\Implementations\DgvDateColumnFilter.resx">
+      <DependentUpon>DgvDateColumnFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Utilidades\Componentes\DGVFilter\Implementations\DgvFilterHost.resx">
+      <DependentUpon>DgvFilterHost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Utilidades\Componentes\DGVFilter\Implementations\DgvTextBoxColumnFilter.resx">
+      <DependentUpon>DgvTextBoxColumnFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Utilidades\FIngresarCantidad.resx">
+      <DependentUpon>FIngresarCantidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Utilidades\PanelBusquedaProductos.resx">
+      <DependentUpon>PanelBusquedaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Utilidades\PanelBusquedaProductosDevolucion.resx">
+      <DependentUpon>PanelBusquedaProductosDevolucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="AccesoDatos\AlvecoComercial10DataSet.xsc">
+      <DependentUpon>AlvecoComercial10DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\AlvecoComercial10DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>AlvecoComercial10DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AccesoDatos\AlvecoComercial10DataSet.xss">
+      <DependentUpon>AlvecoComercial10DataSet.xsd</DependentUpon>
+    </None>
+    <EntityDeploy Include="AccesoDatos\AlvecoEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AlvecoEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\DataSources\SAlvecoComercial10.AccesoDatos.AlvecoComercial10DataSet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ARROW05D.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DRAW03C.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xmag.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disk_green.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\109.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FILEFIND.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accept.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_rotate_clockwise.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_cancel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help4.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kdmconfig.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businessman.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled %28799%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minibus_green.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoppingcart_full.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoppingcart.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Factory.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fondo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Splash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businessman1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PAY00A.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PAY00B.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MONEY05A.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MONEY09A.ICO" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

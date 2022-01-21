@@ -1,0 +1,1078 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AlvecoComercial10Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+  <EntityContainer Name="AlvecoComercial10Entities">
+    <EntitySet Name="Almacenes" EntityType="AlvecoComercial10Model.Almacene" />
+    <EntitySet Name="Bitacoras" EntityType="AlvecoComercial10Model.Bitacora" />
+    <EntitySet Name="Clientes" EntityType="AlvecoComercial10Model.Cliente" />
+    <EntitySet Name="ComprasProductos" EntityType="AlvecoComercial10Model.ComprasProducto" />
+    <EntitySet Name="ComprasProductosDetalles" EntityType="AlvecoComercial10Model.ComprasProductosDetalle" />
+    <EntitySet Name="ComprasProductosDetalleEntregas" EntityType="AlvecoComercial10Model.ComprasProductosDetalleEntrega" />
+    <EntitySet Name="ComprasProductosDevoluciones" EntityType="AlvecoComercial10Model.ComprasProductosDevolucione" />
+    <EntitySet Name="ComprasProductosDevolucionesDetalles" EntityType="AlvecoComercial10Model.ComprasProductosDevolucionesDetalle" />
+    <EntitySet Name="Conceptos" EntityType="AlvecoComercial10Model.Concepto" />
+    <EntitySet Name="CuentasPorCobrars" EntityType="AlvecoComercial10Model.CuentasPorCobrar" />
+    <EntitySet Name="CuentasPorCobrarCobros" EntityType="AlvecoComercial10Model.CuentasPorCobrarCobro" />
+    <EntitySet Name="CuentasPorPagars" EntityType="AlvecoComercial10Model.CuentasPorPagar" />
+    <EntitySet Name="CuentasPorPagarPagos" EntityType="AlvecoComercial10Model.CuentasPorPagarPago" />
+    <EntitySet Name="Departamentos" EntityType="AlvecoComercial10Model.Departamento" />
+    <EntitySet Name="InventariosProductos" EntityType="AlvecoComercial10Model.InventariosProducto" />
+    <EntitySet Name="InventariosProductosCantidadesTransaccionesHistorials" EntityType="AlvecoComercial10Model.InventariosProductosCantidadesTransaccionesHistorial" />
+    <EntitySet Name="Lugares" EntityType="AlvecoComercial10Model.Lugare" />
+    <EntitySet Name="Movilidades" EntityType="AlvecoComercial10Model.Movilidade" />
+    <EntitySet Name="MovilidadesModelos" EntityType="AlvecoComercial10Model.MovilidadesModelo" />
+    <EntitySet Name="Paises" EntityType="AlvecoComercial10Model.Pais" />
+    <EntitySet Name="Personas" EntityType="AlvecoComercial10Model.Persona" />
+    <EntitySet Name="Productos" EntityType="AlvecoComercial10Model.Producto" />
+    <EntitySet Name="ProductosMarcas" EntityType="AlvecoComercial10Model.ProductosMarca" />
+    <EntitySet Name="ProductosTipos" EntityType="AlvecoComercial10Model.ProductosTipos" />
+    <EntitySet Name="ProductosUnidades" EntityType="AlvecoComercial10Model.ProductosUnidade" />
+    <EntitySet Name="Proveedores" EntityType="AlvecoComercial10Model.Proveedore" />
+    <EntitySet Name="Provincias" EntityType="AlvecoComercial10Model.Provincia" />
+    <EntitySet Name="Usuarios" EntityType="AlvecoComercial10Model.Usuario" />
+    <EntitySet Name="VentasProductos" EntityType="AlvecoComercial10Model.VentasProducto" />
+    <EntitySet Name="VentasProductosDetalles" EntityType="AlvecoComercial10Model.VentasProductosDetalle" />
+    <EntitySet Name="VentasProductosDetalleEntregas" EntityType="AlvecoComercial10Model.VentasProductosDetalleEntrega" />
+    <EntitySet Name="VentasProductosDevoluciones" EntityType="AlvecoComercial10Model.VentasProductosDevolucione" />
+    <EntitySet Name="VentasProductosDevolucionesDetalles" EntityType="AlvecoComercial10Model.VentasProductosDevolucionesDetalle" />
+    <AssociationSet Name="FK__CuentasPo__Numer__665875C9" Association="AlvecoComercial10Model.FK__CuentasPo__Numer__665875C9">
+      <End Role="Almacenes" EntitySet="Almacenes" />
+      <End Role="CuentasPorPagar" EntitySet="CuentasPorPagars" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentasPo__Numer__72BE4CAE" Association="AlvecoComercial10Model.FK__CuentasPo__Numer__72BE4CAE">
+      <End Role="Almacenes" EntitySet="Almacenes" />
+      <End Role="CuentasPorCobrar" EntitySet="CuentasPorCobrars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComprasProductosAlmacenes" Association="AlvecoComercial10Model.FK_ComprasProductosAlmacenes">
+      <End Role="Almacenes" EntitySet="Almacenes" />
+      <End Role="ComprasProductos" EntitySet="ComprasProductos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasProductosAlmacenes" Association="AlvecoComercial10Model.FK_VentasProductosAlmacenes">
+      <End Role="Almacenes" EntitySet="Almacenes" />
+      <End Role="VentasProductos" EntitySet="VentasProductos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Clientes__361E876B" Association="AlvecoComercial10Model.FK__Clientes__361E876B">
+      <End Role="Lugares" EntitySet="Lugares" />
+      <End Role="Clientes" EntitySet="Clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentasPo__Codig__74A69520" Association="AlvecoComercial10Model.FK__CuentasPo__Codig__74A69520">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="CuentasPorCobrar" EntitySet="CuentasPorCobrars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasProductosFuncionarios" Association="AlvecoComercial10Model.FK_VentasProductosFuncionarios">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="VentasProductos" EntitySet="VentasProductos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComprasProductos" Association="AlvecoComercial10Model.FK_ComprasProductos">
+      <End Role="ComprasProductos" EntitySet="ComprasProductos" />
+      <End Role="ComprasProductosDetalle" EntitySet="ComprasProductosDetalles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComprasProductosCuentasPorPagar" Association="AlvecoComercial10Model.FK_ComprasProductosCuentasPorPagar">
+      <End Role="CuentasPorPagar" EntitySet="CuentasPorPagars" />
+      <End Role="ComprasProductos" EntitySet="ComprasProductos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComprasProductosDevoluciones" Association="AlvecoComercial10Model.FK_ComprasProductosDevoluciones">
+      <End Role="ComprasProductos" EntitySet="ComprasProductos" />
+      <End Role="ComprasProductosDevoluciones" EntitySet="ComprasProductosDevoluciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComprasProductosProveedores" Association="AlvecoComercial10Model.FK_ComprasProductosProveedores">
+      <End Role="Proveedores" EntitySet="Proveedores" />
+      <End Role="ComprasProductos" EntitySet="ComprasProductos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComprasProductosUsuarios" Association="AlvecoComercial10Model.FK_ComprasProductosUsuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="ComprasProductos" EntitySet="ComprasProductos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComprasProductosDetalle" Association="AlvecoComercial10Model.FK_ComprasProductosDetalle">
+      <End Role="ComprasProductosDetalle" EntitySet="ComprasProductosDetalles" />
+      <End Role="ComprasProductosDetalleEntrega" EntitySet="ComprasProductosDetalleEntregas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComprasProductosDetalleProductos" Association="AlvecoComercial10Model.FK_ComprasProductosDetalleProductos">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="ComprasProductosDetalle" EntitySet="ComprasProductosDetalles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComprasProductosDevolucionesDetalle" Association="AlvecoComercial10Model.FK_ComprasProductosDevolucionesDetalle">
+      <End Role="ComprasProductosDevoluciones" EntitySet="ComprasProductosDevoluciones" />
+      <End Role="ComprasProductosDevolucionesDetalle" EntitySet="ComprasProductosDevolucionesDetalles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComprasProductosDevolucionesUsuarios" Association="AlvecoComercial10Model.FK_ComprasProductosDevolucionesUsuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="ComprasProductosDevoluciones" EntitySet="ComprasProductosDevoluciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComprasProductosDevolucionesDetalleProductos" Association="AlvecoComercial10Model.FK_ComprasProductosDevolucionesDetalleProductos">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="ComprasProductosDevolucionesDetalle" EntitySet="ComprasProductosDevolucionesDetalles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentasPo__Numer__674C9A02" Association="AlvecoComercial10Model.FK__CuentasPo__Numer__674C9A02">
+      <End Role="Conceptos" EntitySet="Conceptos" />
+      <End Role="CuentasPorPagar" EntitySet="CuentasPorPagars" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentasPo__Numer__73B270E7" Association="AlvecoComercial10Model.FK__CuentasPo__Numer__73B270E7">
+      <End Role="Conceptos" EntitySet="Conceptos" />
+      <End Role="CuentasPorCobrar" EntitySet="CuentasPorCobrars" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentasPo__Numer__7A5F6E76" Association="AlvecoComercial10Model.FK__CuentasPo__Numer__7A5F6E76">
+      <End Role="CuentasPorCobrar" EntitySet="CuentasPorCobrars" />
+      <End Role="CuentasPorCobrarCobros" EntitySet="CuentasPorCobrarCobros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasProductoCuentasPorCobrar" Association="AlvecoComercial10Model.FK_VentasProductoCuentasPorCobrar">
+      <End Role="CuentasPorCobrar" EntitySet="CuentasPorCobrars" />
+      <End Role="VentasProductos" EntitySet="VentasProductos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentasPo__Codig__6840BE3B" Association="AlvecoComercial10Model.FK__CuentasPo__Codig__6840BE3B">
+      <End Role="Proveedores" EntitySet="Proveedores" />
+      <End Role="CuentasPorPagar" EntitySet="CuentasPorPagars" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentasPo__Numer__6DF99791" Association="AlvecoComercial10Model.FK__CuentasPo__Numer__6DF99791">
+      <End Role="CuentasPorPagar" EntitySet="CuentasPorPagars" />
+      <End Role="CuentasPorPagarPagos" EntitySet="CuentasPorPagarPagos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Departame__Codig__11E126F5" Association="AlvecoComercial10Model.FK__Departame__Codig__11E126F5">
+      <End Role="Paises" EntitySet="Paises" />
+      <End Role="Departamentos" EntitySet="Departamentos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Provincias__16A5DC12" Association="AlvecoComercial10Model.FK__Provincias__16A5DC12">
+      <End Role="Departamentos" EntitySet="Departamentos" />
+      <End Role="Provincias" EntitySet="Provincias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InventariosProductos01" Association="AlvecoComercial10Model.FK_InventariosProductos01">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="InventariosProductos" EntitySet="InventariosProductos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Lugares__1B6A912F" Association="AlvecoComercial10Model.FK__Lugares__1B6A912F">
+      <End Role="Provincias" EntitySet="Provincias" />
+      <End Role="Lugares" EntitySet="Lugares" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lugares" Association="AlvecoComercial10Model.FK_Lugares">
+      <End Role="Lugares" EntitySet="Lugares" />
+      <End Role="Proveedores" EntitySet="Proveedores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PL02" Association="AlvecoComercial10Model.FK_PL02">
+      <End Role="Lugares" EntitySet="Lugares" />
+      <End Role="Personas" EntitySet="Personas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Movilidades_Marcas" Association="AlvecoComercial10Model.FK_Movilidades_Marcas">
+      <End Role="ProductosMarcas" EntitySet="ProductosMarcas" />
+      <End Role="Movilidades" EntitySet="Movilidades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Movilidades_Modelos" Association="AlvecoComercial10Model.FK_Movilidades_Modelos">
+      <End Role="MovilidadesModelos" EntitySet="MovilidadesModelos" />
+      <End Role="Movilidades" EntitySet="Movilidades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasProductosMovilidades" Association="AlvecoComercial10Model.FK_VentasProductosMovilidades">
+      <End Role="Movilidades" EntitySet="Movilidades" />
+      <End Role="VentasProductos" EntitySet="VentasProductos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuarios__DIUsua__29B8B086" Association="AlvecoComercial10Model.FK__Usuarios__DIUsua__29B8B086">
+      <End Role="Personas" EntitySet="Personas" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasProductoPersonas" Association="AlvecoComercial10Model.FK_VentasProductoPersonas">
+      <End Role="Personas" EntitySet="Personas" />
+      <End Role="VentasProductos" EntitySet="VentasProductos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Productos__Codig__4EEA3535" Association="AlvecoComercial10Model.FK__Productos__Codig__4EEA3535">
+      <End Role="ProductosTipos" EntitySet="ProductosTipos" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Productos__Codig__4FDE596E" Association="AlvecoComercial10Model.FK__Productos__Codig__4FDE596E">
+      <End Role="ProductosMarcas" EntitySet="ProductosMarcas" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Productos__Codig__50D27DA7" Association="AlvecoComercial10Model.FK__Productos__Codig__50D27DA7">
+      <End Role="ProductosUnidades" EntitySet="ProductosUnidades" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasProductosDevolucionesDetalleProductos" Association="AlvecoComercial10Model.FK_VentasProductosDevolucionesDetalleProductos">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="VentasProductosDevolucionesDetalle" EntitySet="VentasProductosDevolucionesDetalles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VPDProductos" Association="AlvecoComercial10Model.FK_VPDProductos">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="VentasProductosDetalle" EntitySet="VentasProductosDetalles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasProductosDevolucionesUsuarios" Association="AlvecoComercial10Model.FK_VentasProductosDevolucionesUsuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="VentasProductosDevoluciones" EntitySet="VentasProductosDevoluciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasProductosUsuarios" Association="AlvecoComercial10Model.FK_VentasProductosUsuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="VentasProductos" EntitySet="VentasProductos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasProductosDevoluciones" Association="AlvecoComercial10Model.FK_VentasProductosDevoluciones">
+      <End Role="VentasProductos" EntitySet="VentasProductos" />
+      <End Role="VentasProductosDevoluciones" EntitySet="VentasProductosDevoluciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VPDVentasProductos" Association="AlvecoComercial10Model.FK_VPDVentasProductos">
+      <End Role="VentasProductos" EntitySet="VentasProductos" />
+      <End Role="VentasProductosDetalle" EntitySet="VentasProductosDetalles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasProductosDetalle" Association="AlvecoComercial10Model.FK_VentasProductosDetalle">
+      <End Role="VentasProductosDetalle" EntitySet="VentasProductosDetalles" />
+      <End Role="VentasProductosDetalleEntrega" EntitySet="VentasProductosDetalleEntregas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentasProductosDevolucionesDetalle" Association="AlvecoComercial10Model.FK_VentasProductosDevolucionesDetalle">
+      <End Role="VentasProductosDevoluciones" EntitySet="VentasProductosDevoluciones" />
+      <End Role="VentasProductosDevolucionesDetalle" EntitySet="VentasProductosDevolucionesDetalles" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Almacene">
+    <Key>
+      <PropertyRef Name="NumeroAlmacen" />
+    </Key>
+    <Property Name="NumeroAlmacen" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreAlmacen" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="CuentasPorPagars" Relationship="AlvecoComercial10Model.FK__CuentasPo__Numer__665875C9" FromRole="Almacenes" ToRole="CuentasPorPagar" />
+    <NavigationProperty Name="CuentasPorCobrars" Relationship="AlvecoComercial10Model.FK__CuentasPo__Numer__72BE4CAE" FromRole="Almacenes" ToRole="CuentasPorCobrar" />
+    <NavigationProperty Name="ComprasProductos" Relationship="AlvecoComercial10Model.FK_ComprasProductosAlmacenes" FromRole="Almacenes" ToRole="ComprasProductos" />
+    <NavigationProperty Name="VentasProductos" Relationship="AlvecoComercial10Model.FK_VentasProductosAlmacenes" FromRole="Almacenes" ToRole="VentasProductos" />
+  </EntityType>
+  <EntityType Name="Bitacora">
+    <Key>
+      <PropertyRef Name="BitacoraID" />
+    </Key>
+    <Property Name="BitacoraID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EventType" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="EventInfo" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+    <Property Name="Usuario" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Fecha" Type="DateTime" />
+    <Property Name="ValoresInsertados" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="ValoresEliminados" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="CodigoCliente" />
+    </Key>
+    <Property Name="CodigoCliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreCliente" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="NombreRepresentante" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="CodigoTipoCliente" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="NITCliente" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Direccion" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="Telefono" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Observaciones" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="CodigoEstadoCliente" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="Lugare" Relationship="AlvecoComercial10Model.FK__Clientes__361E876B" FromRole="Clientes" ToRole="Lugares" />
+    <NavigationProperty Name="CuentasPorCobrars" Relationship="AlvecoComercial10Model.FK__CuentasPo__Codig__74A69520" FromRole="Clientes" ToRole="CuentasPorCobrar" />
+    <NavigationProperty Name="VentasProductos" Relationship="AlvecoComercial10Model.FK_VentasProductosFuncionarios" FromRole="Clientes" ToRole="VentasProductos" />
+  </EntityType>
+  <EntityType Name="ComprasProducto">
+    <Key>
+      <PropertyRef Name="NumeroAlmacen" />
+      <PropertyRef Name="NumeroCompraProducto" />
+    </Key>
+    <Property Name="NumeroAlmacen" Type="Int32" Nullable="false" />
+    <Property Name="NumeroCompraProducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodigoCompraProducto" Type="String" MaxLength="12" Unicode="false" FixedLength="true" />
+    <Property Name="FechaHoraRegistro" Type="DateTime" Nullable="false" />
+    <Property Name="FechaHoraRecepcion" Type="DateTime" />
+    <Property Name="CodigoTipoCompra" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="CodigoEstadoCompra" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="NumeroFactura" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="NumeroComprobante" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="MontoTotalCompra" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="MontoTotalPagoEfectivo" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="Observaciones" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Almacene" Relationship="AlvecoComercial10Model.FK_ComprasProductosAlmacenes" FromRole="ComprasProductos" ToRole="Almacenes" />
+    <NavigationProperty Name="ComprasProductosDetalles" Relationship="AlvecoComercial10Model.FK_ComprasProductos" FromRole="ComprasProductos" ToRole="ComprasProductosDetalle" />
+    <NavigationProperty Name="CuentasPorPagar" Relationship="AlvecoComercial10Model.FK_ComprasProductosCuentasPorPagar" FromRole="ComprasProductos" ToRole="CuentasPorPagar" />
+    <NavigationProperty Name="ComprasProductosDevoluciones" Relationship="AlvecoComercial10Model.FK_ComprasProductosDevoluciones" FromRole="ComprasProductos" ToRole="ComprasProductosDevoluciones" />
+    <NavigationProperty Name="Proveedore" Relationship="AlvecoComercial10Model.FK_ComprasProductosProveedores" FromRole="ComprasProductos" ToRole="Proveedores" />
+    <NavigationProperty Name="Usuario" Relationship="AlvecoComercial10Model.FK_ComprasProductosUsuarios" FromRole="ComprasProductos" ToRole="Usuarios" />
+  </EntityType>
+  <EntityType Name="ComprasProductosDetalle">
+    <Key>
+      <PropertyRef Name="NumeroAlmacen" />
+      <PropertyRef Name="NumeroCompraProducto" />
+      <PropertyRef Name="CodigoProducto" />
+    </Key>
+    <Property Name="NumeroAlmacen" Type="Int32" Nullable="false" />
+    <Property Name="NumeroCompraProducto" Type="Int32" Nullable="false" />
+    <Property Name="CodigoProducto" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+    <Property Name="CantidadCompra" Type="Int32" Nullable="false" />
+    <Property Name="CantidadEntregada" Type="Int32" Nullable="false" />
+    <Property Name="PrecioUnitarioCompra" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="TiempoGarantiaCompra" Type="Int32" />
+    <NavigationProperty Name="ComprasProducto" Relationship="AlvecoComercial10Model.FK_ComprasProductos" FromRole="ComprasProductosDetalle" ToRole="ComprasProductos" />
+    <NavigationProperty Name="ComprasProductosDetalleEntregas" Relationship="AlvecoComercial10Model.FK_ComprasProductosDetalle" FromRole="ComprasProductosDetalle" ToRole="ComprasProductosDetalleEntrega" />
+    <NavigationProperty Name="Producto" Relationship="AlvecoComercial10Model.FK_ComprasProductosDetalleProductos" FromRole="ComprasProductosDetalle" ToRole="Productos" />
+  </EntityType>
+  <EntityType Name="ComprasProductosDetalleEntrega">
+    <Key>
+      <PropertyRef Name="NumeroAlmacen" />
+      <PropertyRef Name="NumeroCompraProducto" />
+      <PropertyRef Name="CodigoProducto" />
+      <PropertyRef Name="FechaHoraEntrega" />
+    </Key>
+    <Property Name="NumeroAlmacen" Type="Int32" Nullable="false" />
+    <Property Name="NumeroCompraProducto" Type="Int32" Nullable="false" />
+    <Property Name="CodigoProducto" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+    <Property Name="CantidadEntregada" Type="Int32" Nullable="false" />
+    <Property Name="FechaHoraEntrega" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="ComprasProductosDetalle" Relationship="AlvecoComercial10Model.FK_ComprasProductosDetalle" FromRole="ComprasProductosDetalleEntrega" ToRole="ComprasProductosDetalle" />
+  </EntityType>
+  <EntityType Name="ComprasProductosDevolucione">
+    <Key>
+      <PropertyRef Name="NumeroAlmacenDevolucion" />
+      <PropertyRef Name="NumeroCompraProductoDevolucion" />
+    </Key>
+    <Property Name="NumeroAlmacenDevolucion" Type="Int32" Nullable="false" />
+    <Property Name="NumeroCompraProductoDevolucion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodigoDevolucionCompraProducto" Type="String" MaxLength="12" Unicode="false" FixedLength="true" />
+    <Property Name="FechaHoraRegistro" Type="DateTime" Nullable="false" />
+    <Property Name="CodigoEstadoCompraDevolucion" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="MontoTotalCompraDevolucion" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="MontoTotalPagoEfectivo" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="FechaHoraDevolucion" Type="DateTime" />
+    <Property Name="Observaciones" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="ComprasProducto" Relationship="AlvecoComercial10Model.FK_ComprasProductosDevoluciones" FromRole="ComprasProductosDevoluciones" ToRole="ComprasProductos" />
+    <NavigationProperty Name="ComprasProductosDevolucionesDetalles" Relationship="AlvecoComercial10Model.FK_ComprasProductosDevolucionesDetalle" FromRole="ComprasProductosDevoluciones" ToRole="ComprasProductosDevolucionesDetalle" />
+    <NavigationProperty Name="Usuario" Relationship="AlvecoComercial10Model.FK_ComprasProductosDevolucionesUsuarios" FromRole="ComprasProductosDevoluciones" ToRole="Usuarios" />
+  </EntityType>
+  <EntityType Name="ComprasProductosDevolucionesDetalle">
+    <Key>
+      <PropertyRef Name="NumeroAlmacenDevolucion" />
+      <PropertyRef Name="NumeroCompraProductoDevolucion" />
+      <PropertyRef Name="CodigoProducto" />
+    </Key>
+    <Property Name="NumeroAlmacenDevolucion" Type="Int32" Nullable="false" />
+    <Property Name="NumeroCompraProductoDevolucion" Type="Int32" Nullable="false" />
+    <Property Name="CodigoProducto" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+    <Property Name="CantidadCompraDevolucion" Type="Int32" Nullable="false" />
+    <Property Name="PrecioUnitarioDevolucion" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <NavigationProperty Name="ComprasProductosDevolucione" Relationship="AlvecoComercial10Model.FK_ComprasProductosDevolucionesDetalle" FromRole="ComprasProductosDevolucionesDetalle" ToRole="ComprasProductosDevoluciones" />
+    <NavigationProperty Name="Producto" Relationship="AlvecoComercial10Model.FK_ComprasProductosDevolucionesDetalleProductos" FromRole="ComprasProductosDevolucionesDetalle" ToRole="Productos" />
+  </EntityType>
+  <EntityType Name="Concepto">
+    <Key>
+      <PropertyRef Name="NumeroConcepto" />
+    </Key>
+    <Property Name="NumeroConcepto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Concepto1" Type="String" Nullable="false" MaxLength="256" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="CuentasPorPagars" Relationship="AlvecoComercial10Model.FK__CuentasPo__Numer__674C9A02" FromRole="Conceptos" ToRole="CuentasPorPagar" />
+    <NavigationProperty Name="CuentasPorCobrars" Relationship="AlvecoComercial10Model.FK__CuentasPo__Numer__73B270E7" FromRole="Conceptos" ToRole="CuentasPorCobrar" />
+  </EntityType>
+  <EntityType Name="CuentasPorCobrar">
+    <Key>
+      <PropertyRef Name="NumeroCuentaPorCobrar" />
+    </Key>
+    <Property Name="NumeroCuentaPorCobrar" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FechaHoraRegistro" Type="DateTime" Nullable="false" />
+    <Property Name="Monto" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="FechaLimite" Type="DateTime" />
+    <Property Name="CodigoEstado" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="Observaciones" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="DIUsuario" Type="String" MaxLength="15" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="Almacene" Relationship="AlvecoComercial10Model.FK__CuentasPo__Numer__72BE4CAE" FromRole="CuentasPorCobrar" ToRole="Almacenes" />
+    <NavigationProperty Name="Cliente" Relationship="AlvecoComercial10Model.FK__CuentasPo__Codig__74A69520" FromRole="CuentasPorCobrar" ToRole="Clientes" />
+    <NavigationProperty Name="Concepto" Relationship="AlvecoComercial10Model.FK__CuentasPo__Numer__73B270E7" FromRole="CuentasPorCobrar" ToRole="Conceptos" />
+    <NavigationProperty Name="CuentasPorCobrarCobros" Relationship="AlvecoComercial10Model.FK__CuentasPo__Numer__7A5F6E76" FromRole="CuentasPorCobrar" ToRole="CuentasPorCobrarCobros" />
+    <NavigationProperty Name="VentasProductos" Relationship="AlvecoComercial10Model.FK_VentasProductoCuentasPorCobrar" FromRole="CuentasPorCobrar" ToRole="VentasProductos" />
+  </EntityType>
+  <EntityType Name="CuentasPorCobrarCobro">
+    <Key>
+      <PropertyRef Name="NumeroCuentaPorCobrar" />
+      <PropertyRef Name="NumeroCobro" />
+    </Key>
+    <Property Name="NumeroCuentaPorCobrar" Type="Int32" Nullable="false" />
+    <Property Name="NumeroCobro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FechaHoraCobro" Type="DateTime" Nullable="false" />
+    <Property Name="Monto" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="DIUsuario" Type="String" MaxLength="15" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="CuentasPorCobrar" Relationship="AlvecoComercial10Model.FK__CuentasPo__Numer__7A5F6E76" FromRole="CuentasPorCobrarCobros" ToRole="CuentasPorCobrar" />
+  </EntityType>
+  <EntityType Name="CuentasPorPagar">
+    <Key>
+      <PropertyRef Name="NumeroCuentaPorPagar" />
+    </Key>
+    <Property Name="NumeroCuentaPorPagar" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FechaHoraRegistro" Type="DateTime" Nullable="false" />
+    <Property Name="Monto" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="FechaLimite" Type="DateTime" />
+    <Property Name="CodigoEstado" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="Observaciones" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="DIUsuario" Type="String" MaxLength="15" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="Almacene" Relationship="AlvecoComercial10Model.FK__CuentasPo__Numer__665875C9" FromRole="CuentasPorPagar" ToRole="Almacenes" />
+    <NavigationProperty Name="ComprasProductos" Relationship="AlvecoComercial10Model.FK_ComprasProductosCuentasPorPagar" FromRole="CuentasPorPagar" ToRole="ComprasProductos" />
+    <NavigationProperty Name="Concepto" Relationship="AlvecoComercial10Model.FK__CuentasPo__Numer__674C9A02" FromRole="CuentasPorPagar" ToRole="Conceptos" />
+    <NavigationProperty Name="Proveedore" Relationship="AlvecoComercial10Model.FK__CuentasPo__Codig__6840BE3B" FromRole="CuentasPorPagar" ToRole="Proveedores" />
+    <NavigationProperty Name="CuentasPorPagarPagos" Relationship="AlvecoComercial10Model.FK__CuentasPo__Numer__6DF99791" FromRole="CuentasPorPagar" ToRole="CuentasPorPagarPagos" />
+  </EntityType>
+  <EntityType Name="CuentasPorPagarPago">
+    <Key>
+      <PropertyRef Name="NumeroCuentaPorPagar" />
+      <PropertyRef Name="NumeroPago" />
+    </Key>
+    <Property Name="NumeroCuentaPorPagar" Type="Int32" Nullable="false" />
+    <Property Name="NumeroPago" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FechaHoraPago" Type="DateTime" Nullable="false" />
+    <Property Name="Monto" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="DIUsuario" Type="String" MaxLength="15" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="CuentasPorPagar" Relationship="AlvecoComercial10Model.FK__CuentasPo__Numer__6DF99791" FromRole="CuentasPorPagarPagos" ToRole="CuentasPorPagar" />
+  </EntityType>
+  <EntityType Name="Departamento">
+    <Key>
+      <PropertyRef Name="CodigoPais" />
+      <PropertyRef Name="CodigoDepartamento" />
+    </Key>
+    <Property Name="CodigoPais" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+    <Property Name="CodigoDepartamento" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+    <Property Name="NombreDepartamento" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Pais" Relationship="AlvecoComercial10Model.FK__Departame__Codig__11E126F5" FromRole="Departamentos" ToRole="Paises" />
+    <NavigationProperty Name="Provincias" Relationship="AlvecoComercial10Model.FK__Provincias__16A5DC12" FromRole="Departamentos" ToRole="Provincias" />
+  </EntityType>
+  <EntityType Name="InventariosProducto">
+    <Key>
+      <PropertyRef Name="NumeroAlmacen" />
+      <PropertyRef Name="CodigoProducto" />
+    </Key>
+    <Property Name="NumeroAlmacen" Type="Int32" Nullable="false" />
+    <Property Name="CodigoProducto" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+    <Property Name="CantidadExistencia" Type="Int32" Nullable="false" />
+    <Property Name="CantidadRequerida" Type="Int32" Nullable="false" />
+    <Property Name="PrecioUnitarioCompra" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="PrecioUnitarioVentaPorMayor" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="PrecioUnitarioVentaPorMenor" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="PorcentajeGananciaVentaPorMayor" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="PorcentajeGananciaVentaPorMenor" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="TiempoGarantiaProducto" Type="Int32" Nullable="false" />
+    <Property Name="StockMinimo" Type="Int32" Nullable="false" />
+    <Property Name="FechaHoraIngresoInventario" Type="DateTime" />
+    <Property Name="PrecioValoradoTotal" Type="Decimal" Precision="10" Scale="2" />
+    <NavigationProperty Name="Producto" Relationship="AlvecoComercial10Model.FK_InventariosProductos01" FromRole="InventariosProductos" ToRole="Productos" />
+  </EntityType>
+  <EntityType Name="InventariosProductosCantidadesTransaccionesHistorial">
+    <Key>
+      <PropertyRef Name="NumeroAlmacen" />
+      <PropertyRef Name="NumeroTransaccionProducto" />
+      <PropertyRef Name="CodigoProducto" />
+      <PropertyRef Name="FechaHoraCompra" />
+    </Key>
+    <Property Name="NumeroAlmacen" Type="Int32" Nullable="false" />
+    <Property Name="NumeroTransaccionProducto" Type="Int32" Nullable="false" />
+    <Property Name="CodigoProducto" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+    <Property Name="CodigoTipoTransaccion" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="FechaHoraCompra" Type="DateTime" Nullable="false" />
+    <Property Name="CantidadExistente" Type="Int32" Nullable="false" />
+    <Property Name="PrecioUnitario" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Lugare">
+    <Key>
+      <PropertyRef Name="CodigoPais" />
+      <PropertyRef Name="CodigoDepartamento" />
+      <PropertyRef Name="CodigoProvincia" />
+      <PropertyRef Name="CodigoLugar" />
+    </Key>
+    <Property Name="CodigoPais" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+    <Property Name="CodigoDepartamento" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+    <Property Name="CodigoProvincia" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+    <Property Name="CodigoLugar" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+    <Property Name="NombreLugar" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Clientes" Relationship="AlvecoComercial10Model.FK__Clientes__361E876B" FromRole="Lugares" ToRole="Clientes" />
+    <NavigationProperty Name="Provincia" Relationship="AlvecoComercial10Model.FK__Lugares__1B6A912F" FromRole="Lugares" ToRole="Provincias" />
+    <NavigationProperty Name="Proveedores" Relationship="AlvecoComercial10Model.FK_Lugares" FromRole="Lugares" ToRole="Proveedores" />
+    <NavigationProperty Name="Personas" Relationship="AlvecoComercial10Model.FK_PL02" FromRole="Lugares" ToRole="Personas" />
+  </EntityType>
+  <EntityType Name="Movilidade">
+    <Key>
+      <PropertyRef Name="CodigoMovilidad" />
+    </Key>
+    <Property Name="CodigoMovilidad" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="NombreMovilidad" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="CodigoPlaca" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+    <Property Name="CodigoEstadoMovilidad" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="ProductosMarca" Relationship="AlvecoComercial10Model.FK_Movilidades_Marcas" FromRole="Movilidades" ToRole="ProductosMarcas" />
+    <NavigationProperty Name="MovilidadesModelo" Relationship="AlvecoComercial10Model.FK_Movilidades_Modelos" FromRole="Movilidades" ToRole="MovilidadesModelos" />
+    <NavigationProperty Name="VentasProductos" Relationship="AlvecoComercial10Model.FK_VentasProductosMovilidades" FromRole="Movilidades" ToRole="VentasProductos" />
+  </EntityType>
+  <EntityType Name="MovilidadesModelo">
+    <Key>
+      <PropertyRef Name="CodigoModelo" />
+    </Key>
+    <Property Name="CodigoModelo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreModelo" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Movilidades" Relationship="AlvecoComercial10Model.FK_Movilidades_Modelos" FromRole="MovilidadesModelos" ToRole="Movilidades" />
+  </EntityType>
+  <EntityType Name="Pais">
+    <Key>
+      <PropertyRef Name="CodigoPais" />
+    </Key>
+    <Property Name="CodigoPais" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+    <Property Name="NombrePais" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="Nacionalidad" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Departamentos" Relationship="AlvecoComercial10Model.FK__Departame__Codig__11E126F5" FromRole="Paises" ToRole="Departamentos" />
+  </EntityType>
+  <EntityType Name="Persona">
+    <Key>
+      <PropertyRef Name="DIPersona" />
+    </Key>
+    <Property Name="DIPersona" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+    <Property Name="Paterno" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="Materno" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="Nombres" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+    <Property Name="FechaNacimiento" Type="DateTime" />
+    <Property Name="Sexo" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="EstadoCivil" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="Celular" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="DireccionD" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TelefonoD" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Observaciones" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Lugare" Relationship="AlvecoComercial10Model.FK_PL02" FromRole="Personas" ToRole="Lugares" />
+    <NavigationProperty Name="Usuario" Relationship="AlvecoComercial10Model.FK__Usuarios__DIUsua__29B8B086" FromRole="Personas" ToRole="Usuarios" />
+    <NavigationProperty Name="VentasProductos" Relationship="AlvecoComercial10Model.FK_VentasProductoPersonas" FromRole="Personas" ToRole="VentasProductos" />
+  </EntityType>
+  <EntityType Name="Producto">
+    <Key>
+      <PropertyRef Name="CodigoProducto" />
+    </Key>
+    <Property Name="CodigoProducto" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+    <Property Name="CodigoProductoFabricante" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="true" />
+    <Property Name="NombreProducto" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="NombreProductoAlternativo" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="CodigoTipoCalculoInventario" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="ActualizarPrecioVenta" Type="Boolean" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Observaciones" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="CodigoProveedor" Type="Int32" />
+    <NavigationProperty Name="ComprasProductosDetalles" Relationship="AlvecoComercial10Model.FK_ComprasProductosDetalleProductos" FromRole="Productos" ToRole="ComprasProductosDetalle" />
+    <NavigationProperty Name="ComprasProductosDevolucionesDetalles" Relationship="AlvecoComercial10Model.FK_ComprasProductosDevolucionesDetalleProductos" FromRole="Productos" ToRole="ComprasProductosDevolucionesDetalle" />
+    <NavigationProperty Name="InventariosProductos" Relationship="AlvecoComercial10Model.FK_InventariosProductos01" FromRole="Productos" ToRole="InventariosProductos" />
+    <NavigationProperty Name="ProductosTipos" Relationship="AlvecoComercial10Model.FK__Productos__Codig__4EEA3535" FromRole="Productos" ToRole="ProductosTipos" />
+    <NavigationProperty Name="ProductosMarca" Relationship="AlvecoComercial10Model.FK__Productos__Codig__4FDE596E" FromRole="Productos" ToRole="ProductosMarcas" />
+    <NavigationProperty Name="ProductosUnidade" Relationship="AlvecoComercial10Model.FK__Productos__Codig__50D27DA7" FromRole="Productos" ToRole="ProductosUnidades" />
+    <NavigationProperty Name="VentasProductosDevolucionesDetalles" Relationship="AlvecoComercial10Model.FK_VentasProductosDevolucionesDetalleProductos" FromRole="Productos" ToRole="VentasProductosDevolucionesDetalle" />
+    <NavigationProperty Name="VentasProductosDetalles" Relationship="AlvecoComercial10Model.FK_VPDProductos" FromRole="Productos" ToRole="VentasProductosDetalle" />
+  </EntityType>
+  <EntityType Name="ProductosMarca">
+    <Key>
+      <PropertyRef Name="CodigoMarca" />
+    </Key>
+    <Property Name="CodigoMarca" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreMarca" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="CodigoTipoMarca" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="Movilidades" Relationship="AlvecoComercial10Model.FK_Movilidades_Marcas" FromRole="ProductosMarcas" ToRole="Movilidades" />
+    <NavigationProperty Name="Productos" Relationship="AlvecoComercial10Model.FK__Productos__Codig__4FDE596E" FromRole="ProductosMarcas" ToRole="Productos" />
+  </EntityType>
+  <EntityType Name="ProductosTipos">
+    <Key>
+      <PropertyRef Name="CodigoProductoTipo" />
+    </Key>
+    <Property Name="CodigoProductoTipo" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="CodigoProductoTipoPadre" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="NombreProductoTipo" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="DescripcionProductoTipo" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Productos" Relationship="AlvecoComercial10Model.FK__Productos__Codig__4EEA3535" FromRole="ProductosTipos" ToRole="Productos" />
+  </EntityType>
+  <EntityType Name="ProductosUnidade">
+    <Key>
+      <PropertyRef Name="CodigoUnidad" />
+    </Key>
+    <Property Name="CodigoUnidad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreUnidad" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Productos" Relationship="AlvecoComercial10Model.FK__Productos__Codig__50D27DA7" FromRole="ProductosUnidades" ToRole="Productos" />
+  </EntityType>
+  <EntityType Name="Proveedore">
+    <Key>
+      <PropertyRef Name="CodigoProveedor" />
+    </Key>
+    <Property Name="CodigoProveedor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreRazonSocial" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="NombreRepresentante" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="CodigoTipoProveedor" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="NITProveedor" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Direccion" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="Telefono" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Fax" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Casilla" Type="String" MaxLength="15" Unicode="false" FixedLength="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="PorcentajeGananciaVentaPorMayor" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="PorcentajeGananciaVentaPorMenor" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="Observaciones" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="ProveedorActivo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="ComprasProductos" Relationship="AlvecoComercial10Model.FK_ComprasProductosProveedores" FromRole="Proveedores" ToRole="ComprasProductos" />
+    <NavigationProperty Name="CuentasPorPagars" Relationship="AlvecoComercial10Model.FK__CuentasPo__Codig__6840BE3B" FromRole="Proveedores" ToRole="CuentasPorPagar" />
+    <NavigationProperty Name="Lugare" Relationship="AlvecoComercial10Model.FK_Lugares" FromRole="Proveedores" ToRole="Lugares" />
+  </EntityType>
+  <EntityType Name="Provincia">
+    <Key>
+      <PropertyRef Name="CodigoPais" />
+      <PropertyRef Name="CodigoDepartamento" />
+      <PropertyRef Name="CodigoProvincia" />
+    </Key>
+    <Property Name="CodigoPais" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+    <Property Name="CodigoDepartamento" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+    <Property Name="CodigoProvincia" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+    <Property Name="NombreProvincia" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Departamento" Relationship="AlvecoComercial10Model.FK__Provincias__16A5DC12" FromRole="Provincias" ToRole="Departamentos" />
+    <NavigationProperty Name="Lugares" Relationship="AlvecoComercial10Model.FK__Lugares__1B6A912F" FromRole="Provincias" ToRole="Lugares" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="DIUsuario" />
+    </Key>
+    <Property Name="DIUsuario" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+    <Property Name="NombreUsuario" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="true" />
+    <Property Name="FechaRegistro" Type="DateTime" />
+    <Property Name="Observaciones" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Contrasena" Type="Binary" MaxLength="255" FixedLength="false" />
+    <NavigationProperty Name="ComprasProductos" Relationship="AlvecoComercial10Model.FK_ComprasProductosUsuarios" FromRole="Usuarios" ToRole="ComprasProductos" />
+    <NavigationProperty Name="ComprasProductosDevoluciones" Relationship="AlvecoComercial10Model.FK_ComprasProductosDevolucionesUsuarios" FromRole="Usuarios" ToRole="ComprasProductosDevoluciones" />
+    <NavigationProperty Name="Persona" Relationship="AlvecoComercial10Model.FK__Usuarios__DIUsua__29B8B086" FromRole="Usuarios" ToRole="Personas" />
+    <NavigationProperty Name="VentasProductosDevoluciones" Relationship="AlvecoComercial10Model.FK_VentasProductosDevolucionesUsuarios" FromRole="Usuarios" ToRole="VentasProductosDevoluciones" />
+    <NavigationProperty Name="VentasProductos" Relationship="AlvecoComercial10Model.FK_VentasProductosUsuarios" FromRole="Usuarios" ToRole="VentasProductos" />
+  </EntityType>
+  <EntityType Name="VentasProducto">
+    <Key>
+      <PropertyRef Name="NumeroAlmacen" />
+      <PropertyRef Name="NumeroVentaProducto" />
+    </Key>
+    <Property Name="NumeroAlmacen" Type="Int32" Nullable="false" />
+    <Property Name="NumeroVentaProducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodigoVentaProducto" Type="String" MaxLength="12" Unicode="false" FixedLength="true" />
+    <Property Name="FechaHoraVenta" Type="DateTime" Nullable="false" />
+    <Property Name="FechaHoraEntrega" Type="DateTime" />
+    <Property Name="NumeroComprobante" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="CodigoEstadoVenta" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="CodigoTipoVenta" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="NumeroFactura" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="MontoTotalVenta" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="MontoTotalPagoEfectivo" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="VentaParaDistribuir" Type="Boolean" />
+    <Property Name="MontoTotalDescuento" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="EsVentaDistribuible" Type="Boolean" />
+    <Property Name="Observaciones" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Almacene" Relationship="AlvecoComercial10Model.FK_VentasProductosAlmacenes" FromRole="VentasProductos" ToRole="Almacenes" />
+    <NavigationProperty Name="Cliente" Relationship="AlvecoComercial10Model.FK_VentasProductosFuncionarios" FromRole="VentasProductos" ToRole="Clientes" />
+    <NavigationProperty Name="CuentasPorCobrar" Relationship="AlvecoComercial10Model.FK_VentasProductoCuentasPorCobrar" FromRole="VentasProductos" ToRole="CuentasPorCobrar" />
+    <NavigationProperty Name="Movilidade" Relationship="AlvecoComercial10Model.FK_VentasProductosMovilidades" FromRole="VentasProductos" ToRole="Movilidades" />
+    <NavigationProperty Name="Persona" Relationship="AlvecoComercial10Model.FK_VentasProductoPersonas" FromRole="VentasProductos" ToRole="Personas" />
+    <NavigationProperty Name="Usuario" Relationship="AlvecoComercial10Model.FK_VentasProductosUsuarios" FromRole="VentasProductos" ToRole="Usuarios" />
+    <NavigationProperty Name="VentasProductosDevoluciones" Relationship="AlvecoComercial10Model.FK_VentasProductosDevoluciones" FromRole="VentasProductos" ToRole="VentasProductosDevoluciones" />
+    <NavigationProperty Name="VentasProductosDetalles" Relationship="AlvecoComercial10Model.FK_VPDVentasProductos" FromRole="VentasProductos" ToRole="VentasProductosDetalle" />
+  </EntityType>
+  <EntityType Name="VentasProductosDetalle">
+    <Key>
+      <PropertyRef Name="NumeroAlmacen" />
+      <PropertyRef Name="NumeroVentaProducto" />
+      <PropertyRef Name="CodigoProducto" />
+    </Key>
+    <Property Name="NumeroAlmacen" Type="Int32" Nullable="false" />
+    <Property Name="NumeroVentaProducto" Type="Int32" Nullable="false" />
+    <Property Name="CodigoProducto" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+    <Property Name="CantidadVenta" Type="Int32" Nullable="false" />
+    <Property Name="CantidadEntregada" Type="Int32" Nullable="false" />
+    <Property Name="PrecioUnitarioVenta" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="PorcentajeDescuento" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="TiempoGarantiaVenta" Type="Int32" />
+    <NavigationProperty Name="Producto" Relationship="AlvecoComercial10Model.FK_VPDProductos" FromRole="VentasProductosDetalle" ToRole="Productos" />
+    <NavigationProperty Name="VentasProducto" Relationship="AlvecoComercial10Model.FK_VPDVentasProductos" FromRole="VentasProductosDetalle" ToRole="VentasProductos" />
+    <NavigationProperty Name="VentasProductosDetalleEntregas" Relationship="AlvecoComercial10Model.FK_VentasProductosDetalle" FromRole="VentasProductosDetalle" ToRole="VentasProductosDetalleEntrega" />
+  </EntityType>
+  <EntityType Name="VentasProductosDetalleEntrega">
+    <Key>
+      <PropertyRef Name="NumeroAlmacen" />
+      <PropertyRef Name="NumeroVentaProducto" />
+      <PropertyRef Name="CodigoProducto" />
+      <PropertyRef Name="FechaHoraEntrega" />
+      <PropertyRef Name="FechaHoraCompraInventario" />
+    </Key>
+    <Property Name="NumeroAlmacen" Type="Int32" Nullable="false" />
+    <Property Name="NumeroVentaProducto" Type="Int32" Nullable="false" />
+    <Property Name="CodigoProducto" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+    <Property Name="FechaHoraEntrega" Type="DateTime" Nullable="false" />
+    <Property Name="FechaHoraCompraInventario" Type="DateTime" Nullable="false" />
+    <Property Name="CantidadEntregada" Type="Int32" Nullable="false" />
+    <Property Name="PrecioUnitarioCompraInventario" Type="Decimal" Precision="10" Scale="2" />
+    <NavigationProperty Name="VentasProductosDetalle" Relationship="AlvecoComercial10Model.FK_VentasProductosDetalle" FromRole="VentasProductosDetalleEntrega" ToRole="VentasProductosDetalle" />
+  </EntityType>
+  <EntityType Name="VentasProductosDevolucione">
+    <Key>
+      <PropertyRef Name="NumeroAlmacenDevolucion" />
+      <PropertyRef Name="NumeroVentaProductoDevolucion" />
+    </Key>
+    <Property Name="NumeroAlmacenDevolucion" Type="Int32" Nullable="false" />
+    <Property Name="NumeroVentaProductoDevolucion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodigoDevolucionVentaProducto" Type="String" MaxLength="12" Unicode="false" FixedLength="true" />
+    <Property Name="FechaHoraRegistro" Type="DateTime" Nullable="false" />
+    <Property Name="CodigoEstadoVentaDevolucion" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="MontoTotalVentaDevolucion" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="MontoTotalPagoEfectivo" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="FechaHoraDevolucion" Type="DateTime" />
+    <Property Name="Observaciones" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Usuario" Relationship="AlvecoComercial10Model.FK_VentasProductosDevolucionesUsuarios" FromRole="VentasProductosDevoluciones" ToRole="Usuarios" />
+    <NavigationProperty Name="VentasProducto" Relationship="AlvecoComercial10Model.FK_VentasProductosDevoluciones" FromRole="VentasProductosDevoluciones" ToRole="VentasProductos" />
+    <NavigationProperty Name="VentasProductosDevolucionesDetalles" Relationship="AlvecoComercial10Model.FK_VentasProductosDevolucionesDetalle" FromRole="VentasProductosDevoluciones" ToRole="VentasProductosDevolucionesDetalle" />
+  </EntityType>
+  <EntityType Name="VentasProductosDevolucionesDetalle">
+    <Key>
+      <PropertyRef Name="NumeroAlmacenDevolucion" />
+      <PropertyRef Name="NumeroVentaProductoDevolucion" />
+      <PropertyRef Name="CodigoProducto" />
+    </Key>
+    <Property Name="NumeroAlmacenDevolucion" Type="Int32" Nullable="false" />
+    <Property Name="NumeroVentaProductoDevolucion" Type="Int32" Nullable="false" />
+    <Property Name="CodigoProducto" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+    <Property Name="CantidadVentaDevolucion" Type="Int32" Nullable="false" />
+    <Property Name="PrecioUnitarioDevolucion" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <NavigationProperty Name="Producto" Relationship="AlvecoComercial10Model.FK_VentasProductosDevolucionesDetalleProductos" FromRole="VentasProductosDevolucionesDetalle" ToRole="Productos" />
+    <NavigationProperty Name="VentasProductosDevolucione" Relationship="AlvecoComercial10Model.FK_VentasProductosDevolucionesDetalle" FromRole="VentasProductosDevolucionesDetalle" ToRole="VentasProductosDevoluciones" />
+  </EntityType>
+  <Association Name="FK__CuentasPo__Numer__665875C9">
+    <End Role="Almacenes" Type="AlvecoComercial10Model.Almacene" Multiplicity="1" />
+    <End Role="CuentasPorPagar" Type="AlvecoComercial10Model.CuentasPorPagar" Multiplicity="*" />
+  </Association>
+  <Association Name="FK__CuentasPo__Numer__72BE4CAE">
+    <End Role="Almacenes" Type="AlvecoComercial10Model.Almacene" Multiplicity="1" />
+    <End Role="CuentasPorCobrar" Type="AlvecoComercial10Model.CuentasPorCobrar" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_ComprasProductosAlmacenes">
+    <End Role="Almacenes" Type="AlvecoComercial10Model.Almacene" Multiplicity="1" />
+    <End Role="ComprasProductos" Type="AlvecoComercial10Model.ComprasProducto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Almacenes">
+        <PropertyRef Name="NumeroAlmacen" />
+      </Principal>
+      <Dependent Role="ComprasProductos">
+        <PropertyRef Name="NumeroAlmacen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VentasProductosAlmacenes">
+    <End Role="Almacenes" Type="AlvecoComercial10Model.Almacene" Multiplicity="1" />
+    <End Role="VentasProductos" Type="AlvecoComercial10Model.VentasProducto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Almacenes">
+        <PropertyRef Name="NumeroAlmacen" />
+      </Principal>
+      <Dependent Role="VentasProductos">
+        <PropertyRef Name="NumeroAlmacen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Clientes__361E876B">
+    <End Role="Lugares" Type="AlvecoComercial10Model.Lugare" Multiplicity="0..1" />
+    <End Role="Clientes" Type="AlvecoComercial10Model.Cliente" Multiplicity="*" />
+  </Association>
+  <Association Name="FK__CuentasPo__Codig__74A69520">
+    <End Role="Clientes" Type="AlvecoComercial10Model.Cliente" Multiplicity="0..1" />
+    <End Role="CuentasPorCobrar" Type="AlvecoComercial10Model.CuentasPorCobrar" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_VentasProductosFuncionarios">
+    <End Role="Clientes" Type="AlvecoComercial10Model.Cliente" Multiplicity="1" />
+    <End Role="VentasProductos" Type="AlvecoComercial10Model.VentasProducto" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_ComprasProductos">
+    <End Role="ComprasProductos" Type="AlvecoComercial10Model.ComprasProducto" Multiplicity="1" />
+    <End Role="ComprasProductosDetalle" Type="AlvecoComercial10Model.ComprasProductosDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ComprasProductos">
+        <PropertyRef Name="NumeroAlmacen" />
+        <PropertyRef Name="NumeroCompraProducto" />
+      </Principal>
+      <Dependent Role="ComprasProductosDetalle">
+        <PropertyRef Name="NumeroAlmacen" />
+        <PropertyRef Name="NumeroCompraProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComprasProductosCuentasPorPagar">
+    <End Role="CuentasPorPagar" Type="AlvecoComercial10Model.CuentasPorPagar" Multiplicity="0..1" />
+    <End Role="ComprasProductos" Type="AlvecoComercial10Model.ComprasProducto" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_ComprasProductosDevoluciones">
+    <End Role="ComprasProductos" Type="AlvecoComercial10Model.ComprasProducto" Multiplicity="1" />
+    <End Role="ComprasProductosDevoluciones" Type="AlvecoComercial10Model.ComprasProductosDevolucione" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_ComprasProductosProveedores">
+    <End Role="Proveedores" Type="AlvecoComercial10Model.Proveedore" Multiplicity="1" />
+    <End Role="ComprasProductos" Type="AlvecoComercial10Model.ComprasProducto" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_ComprasProductosUsuarios">
+    <End Role="Usuarios" Type="AlvecoComercial10Model.Usuario" Multiplicity="1" />
+    <End Role="ComprasProductos" Type="AlvecoComercial10Model.ComprasProducto" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_ComprasProductosDetalle">
+    <End Role="ComprasProductosDetalle" Type="AlvecoComercial10Model.ComprasProductosDetalle" Multiplicity="1" />
+    <End Role="ComprasProductosDetalleEntrega" Type="AlvecoComercial10Model.ComprasProductosDetalleEntrega" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ComprasProductosDetalle">
+        <PropertyRef Name="NumeroAlmacen" />
+        <PropertyRef Name="NumeroCompraProducto" />
+        <PropertyRef Name="CodigoProducto" />
+      </Principal>
+      <Dependent Role="ComprasProductosDetalleEntrega">
+        <PropertyRef Name="NumeroAlmacen" />
+        <PropertyRef Name="NumeroCompraProducto" />
+        <PropertyRef Name="CodigoProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComprasProductosDetalleProductos">
+    <End Role="Productos" Type="AlvecoComercial10Model.Producto" Multiplicity="1" />
+    <End Role="ComprasProductosDetalle" Type="AlvecoComercial10Model.ComprasProductosDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos">
+        <PropertyRef Name="CodigoProducto" />
+      </Principal>
+      <Dependent Role="ComprasProductosDetalle">
+        <PropertyRef Name="CodigoProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComprasProductosDevolucionesDetalle">
+    <End Role="ComprasProductosDevoluciones" Type="AlvecoComercial10Model.ComprasProductosDevolucione" Multiplicity="1" />
+    <End Role="ComprasProductosDevolucionesDetalle" Type="AlvecoComercial10Model.ComprasProductosDevolucionesDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ComprasProductosDevoluciones">
+        <PropertyRef Name="NumeroAlmacenDevolucion" />
+        <PropertyRef Name="NumeroCompraProductoDevolucion" />
+      </Principal>
+      <Dependent Role="ComprasProductosDevolucionesDetalle">
+        <PropertyRef Name="NumeroAlmacenDevolucion" />
+        <PropertyRef Name="NumeroCompraProductoDevolucion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComprasProductosDevolucionesUsuarios">
+    <End Role="Usuarios" Type="AlvecoComercial10Model.Usuario" Multiplicity="1" />
+    <End Role="ComprasProductosDevoluciones" Type="AlvecoComercial10Model.ComprasProductosDevolucione" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_ComprasProductosDevolucionesDetalleProductos">
+    <End Role="Productos" Type="AlvecoComercial10Model.Producto" Multiplicity="1" />
+    <End Role="ComprasProductosDevolucionesDetalle" Type="AlvecoComercial10Model.ComprasProductosDevolucionesDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos">
+        <PropertyRef Name="CodigoProducto" />
+      </Principal>
+      <Dependent Role="ComprasProductosDevolucionesDetalle">
+        <PropertyRef Name="CodigoProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentasPo__Numer__674C9A02">
+    <End Role="Conceptos" Type="AlvecoComercial10Model.Concepto" Multiplicity="0..1" />
+    <End Role="CuentasPorPagar" Type="AlvecoComercial10Model.CuentasPorPagar" Multiplicity="*" />
+  </Association>
+  <Association Name="FK__CuentasPo__Numer__73B270E7">
+    <End Role="Conceptos" Type="AlvecoComercial10Model.Concepto" Multiplicity="0..1" />
+    <End Role="CuentasPorCobrar" Type="AlvecoComercial10Model.CuentasPorCobrar" Multiplicity="*" />
+  </Association>
+  <Association Name="FK__CuentasPo__Numer__7A5F6E76">
+    <End Role="CuentasPorCobrar" Type="AlvecoComercial10Model.CuentasPorCobrar" Multiplicity="1" />
+    <End Role="CuentasPorCobrarCobros" Type="AlvecoComercial10Model.CuentasPorCobrarCobro" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CuentasPorCobrar">
+        <PropertyRef Name="NumeroCuentaPorCobrar" />
+      </Principal>
+      <Dependent Role="CuentasPorCobrarCobros">
+        <PropertyRef Name="NumeroCuentaPorCobrar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VentasProductoCuentasPorCobrar">
+    <End Role="CuentasPorCobrar" Type="AlvecoComercial10Model.CuentasPorCobrar" Multiplicity="0..1" />
+    <End Role="VentasProductos" Type="AlvecoComercial10Model.VentasProducto" Multiplicity="*" />
+  </Association>
+  <Association Name="FK__CuentasPo__Codig__6840BE3B">
+    <End Role="Proveedores" Type="AlvecoComercial10Model.Proveedore" Multiplicity="0..1" />
+    <End Role="CuentasPorPagar" Type="AlvecoComercial10Model.CuentasPorPagar" Multiplicity="*" />
+  </Association>
+  <Association Name="FK__CuentasPo__Numer__6DF99791">
+    <End Role="CuentasPorPagar" Type="AlvecoComercial10Model.CuentasPorPagar" Multiplicity="1" />
+    <End Role="CuentasPorPagarPagos" Type="AlvecoComercial10Model.CuentasPorPagarPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CuentasPorPagar">
+        <PropertyRef Name="NumeroCuentaPorPagar" />
+      </Principal>
+      <Dependent Role="CuentasPorPagarPagos">
+        <PropertyRef Name="NumeroCuentaPorPagar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Departame__Codig__11E126F5">
+    <End Role="Paises" Type="AlvecoComercial10Model.Pais" Multiplicity="1" />
+    <End Role="Departamentos" Type="AlvecoComercial10Model.Departamento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Paises">
+        <PropertyRef Name="CodigoPais" />
+      </Principal>
+      <Dependent Role="Departamentos">
+        <PropertyRef Name="CodigoPais" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Provincias__16A5DC12">
+    <End Role="Departamentos" Type="AlvecoComercial10Model.Departamento" Multiplicity="1" />
+    <End Role="Provincias" Type="AlvecoComercial10Model.Provincia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamentos">
+        <PropertyRef Name="CodigoPais" />
+        <PropertyRef Name="CodigoDepartamento" />
+      </Principal>
+      <Dependent Role="Provincias">
+        <PropertyRef Name="CodigoPais" />
+        <PropertyRef Name="CodigoDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InventariosProductos01">
+    <End Role="Productos" Type="AlvecoComercial10Model.Producto" Multiplicity="1" />
+    <End Role="InventariosProductos" Type="AlvecoComercial10Model.InventariosProducto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos">
+        <PropertyRef Name="CodigoProducto" />
+      </Principal>
+      <Dependent Role="InventariosProductos">
+        <PropertyRef Name="CodigoProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Lugares__1B6A912F">
+    <End Role="Provincias" Type="AlvecoComercial10Model.Provincia" Multiplicity="1" />
+    <End Role="Lugares" Type="AlvecoComercial10Model.Lugare" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Provincias">
+        <PropertyRef Name="CodigoPais" />
+        <PropertyRef Name="CodigoDepartamento" />
+        <PropertyRef Name="CodigoProvincia" />
+      </Principal>
+      <Dependent Role="Lugares">
+        <PropertyRef Name="CodigoPais" />
+        <PropertyRef Name="CodigoDepartamento" />
+        <PropertyRef Name="CodigoProvincia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lugares">
+    <End Role="Lugares" Type="AlvecoComercial10Model.Lugare" Multiplicity="0..1" />
+    <End Role="Proveedores" Type="AlvecoComercial10Model.Proveedore" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_PL02">
+    <End Role="Lugares" Type="AlvecoComercial10Model.Lugare" Multiplicity="0..1" />
+    <End Role="Personas" Type="AlvecoComercial10Model.Persona" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_Movilidades_Marcas">
+    <End Role="ProductosMarcas" Type="AlvecoComercial10Model.ProductosMarca" Multiplicity="1" />
+    <End Role="Movilidades" Type="AlvecoComercial10Model.Movilidade" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_Movilidades_Modelos">
+    <End Role="MovilidadesModelos" Type="AlvecoComercial10Model.MovilidadesModelo" Multiplicity="1" />
+    <End Role="Movilidades" Type="AlvecoComercial10Model.Movilidade" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_VentasProductosMovilidades">
+    <End Role="Movilidades" Type="AlvecoComercial10Model.Movilidade" Multiplicity="0..1" />
+    <End Role="VentasProductos" Type="AlvecoComercial10Model.VentasProducto" Multiplicity="*" />
+  </Association>
+  <Association Name="FK__Usuarios__DIUsua__29B8B086">
+    <End Role="Personas" Type="AlvecoComercial10Model.Persona" Multiplicity="1" />
+    <End Role="Usuarios" Type="AlvecoComercial10Model.Usuario" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Personas">
+        <PropertyRef Name="DIPersona" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="DIUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VentasProductoPersonas">
+    <End Role="Personas" Type="AlvecoComercial10Model.Persona" Multiplicity="0..1" />
+    <End Role="VentasProductos" Type="AlvecoComercial10Model.VentasProducto" Multiplicity="*" />
+  </Association>
+  <Association Name="FK__Productos__Codig__4EEA3535">
+    <End Role="ProductosTipos" Type="AlvecoComercial10Model.ProductosTipos" Multiplicity="1" />
+    <End Role="Productos" Type="AlvecoComercial10Model.Producto" Multiplicity="*" />
+  </Association>
+  <Association Name="FK__Productos__Codig__4FDE596E">
+    <End Role="ProductosMarcas" Type="AlvecoComercial10Model.ProductosMarca" Multiplicity="0..1" />
+    <End Role="Productos" Type="AlvecoComercial10Model.Producto" Multiplicity="*" />
+  </Association>
+  <Association Name="FK__Productos__Codig__50D27DA7">
+    <End Role="ProductosUnidades" Type="AlvecoComercial10Model.ProductosUnidade" Multiplicity="1" />
+    <End Role="Productos" Type="AlvecoComercial10Model.Producto" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_VentasProductosDevolucionesDetalleProductos">
+    <End Role="Productos" Type="AlvecoComercial10Model.Producto" Multiplicity="1" />
+    <End Role="VentasProductosDevolucionesDetalle" Type="AlvecoComercial10Model.VentasProductosDevolucionesDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos">
+        <PropertyRef Name="CodigoProducto" />
+      </Principal>
+      <Dependent Role="VentasProductosDevolucionesDetalle">
+        <PropertyRef Name="CodigoProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VPDProductos">
+    <End Role="Productos" Type="AlvecoComercial10Model.Producto" Multiplicity="1" />
+    <End Role="VentasProductosDetalle" Type="AlvecoComercial10Model.VentasProductosDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos">
+        <PropertyRef Name="CodigoProducto" />
+      </Principal>
+      <Dependent Role="VentasProductosDetalle">
+        <PropertyRef Name="CodigoProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VentasProductosDevolucionesUsuarios">
+    <End Role="Usuarios" Type="AlvecoComercial10Model.Usuario" Multiplicity="1" />
+    <End Role="VentasProductosDevoluciones" Type="AlvecoComercial10Model.VentasProductosDevolucione" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_VentasProductosUsuarios">
+    <End Role="Usuarios" Type="AlvecoComercial10Model.Usuario" Multiplicity="1" />
+    <End Role="VentasProductos" Type="AlvecoComercial10Model.VentasProducto" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_VentasProductosDevoluciones">
+    <End Role="VentasProductos" Type="AlvecoComercial10Model.VentasProducto" Multiplicity="1" />
+    <End Role="VentasProductosDevoluciones" Type="AlvecoComercial10Model.VentasProductosDevolucione" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_VPDVentasProductos">
+    <End Role="VentasProductos" Type="AlvecoComercial10Model.VentasProducto" Multiplicity="1" />
+    <End Role="VentasProductosDetalle" Type="AlvecoComercial10Model.VentasProductosDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VentasProductos">
+        <PropertyRef Name="NumeroAlmacen" />
+        <PropertyRef Name="NumeroVentaProducto" />
+      </Principal>
+      <Dependent Role="VentasProductosDetalle">
+        <PropertyRef Name="NumeroAlmacen" />
+        <PropertyRef Name="NumeroVentaProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VentasProductosDetalle">
+    <End Role="VentasProductosDetalle" Type="AlvecoComercial10Model.VentasProductosDetalle" Multiplicity="1" />
+    <End Role="VentasProductosDetalleEntrega" Type="AlvecoComercial10Model.VentasProductosDetalleEntrega" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VentasProductosDetalle">
+        <PropertyRef Name="NumeroAlmacen" />
+        <PropertyRef Name="NumeroVentaProducto" />
+        <PropertyRef Name="CodigoProducto" />
+      </Principal>
+      <Dependent Role="VentasProductosDetalleEntrega">
+        <PropertyRef Name="NumeroAlmacen" />
+        <PropertyRef Name="NumeroVentaProducto" />
+        <PropertyRef Name="CodigoProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VentasProductosDevolucionesDetalle">
+    <End Role="VentasProductosDevoluciones" Type="AlvecoComercial10Model.VentasProductosDevolucione" Multiplicity="1" />
+    <End Role="VentasProductosDevolucionesDetalle" Type="AlvecoComercial10Model.VentasProductosDevolucionesDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VentasProductosDevoluciones">
+        <PropertyRef Name="NumeroAlmacenDevolucion" />
+        <PropertyRef Name="NumeroVentaProductoDevolucion" />
+      </Principal>
+      <Dependent Role="VentasProductosDevolucionesDetalle">
+        <PropertyRef Name="NumeroAlmacenDevolucion" />
+        <PropertyRef Name="NumeroVentaProductoDevolucion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
